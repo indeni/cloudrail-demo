@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  cloudrail: indeni/cloudrail@1.3.0
+  cloudrail: indeni/cloudrail@1.4.0
 
 workflows:
   main:
