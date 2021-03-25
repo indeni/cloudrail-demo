@@ -86,6 +86,16 @@ NOTES:
   64. [Ensure Lambda function policy does not use wildcard actions](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_lambda_function_policy_not_use_wildcard_rule)
   65. [Ensure every security groups rule has a description](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_security_group_rule_include_description_rule)
   66. [Ensure Workspaces user volume being created are set to be encrypted at rest with customer-managed CMK](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_workspace_user_volume_encrypted_with_customer_cmk_rule)
+  67. [Ensure IAM entities' policies are managed solely in infrastructure-as-code](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_iam_entities_policy_managed_solely_rule)
+  68. [Ensure Neptune DB are not publicly accessible](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/public_access_db_neptune_rule)
+  69. [Ensure VPC Endpoint for SQS is enabled in all VPCs in use](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/vpc_endpoint_sqs_exposure_rule)
+  70. [Ensure ECS task definitions being created are set to encrypt in transit with EFS](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_ecs_task_definition_created_with_efs_encrypt_in_transit_rule)
+  71. [Ensure SSM Parameter Store SecureString strings are encrypted at rest with customer-managed CMK](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_ssm_parameter_store_using_encrypted_customer_managed_kms_rule)
+  72. [Ensure each Lambda function has a non-infinite log retention](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_lambda_function_has_non_infinite_log_retention_rule)
+  73. [Ensure VPC Endpoint for SQS is enabled in all Availability Zones in use a VPC](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/sqs_vpc_endpoint_interface_availability_zone)
+  74. [Ensure all resources that can be tagged have at least one tag](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_all_resources_tagged_rule)
+  75. [Ensure VPC Endpoint for EC2 is enabled in all VPCs in use]((https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/vpc_endpoint_ec2_exposure_rule)
+  
 
 
 </details>

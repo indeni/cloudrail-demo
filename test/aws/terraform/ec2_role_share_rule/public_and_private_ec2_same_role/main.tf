@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 locals {
-  test_description = "two EC2s, one public, one private, same role"
+  test_description = "two EC2s, one public, one private"
   test_name        = "Ec2RoleShareRule test - use case 1"
 }
 
