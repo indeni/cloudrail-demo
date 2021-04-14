@@ -5,7 +5,7 @@ Did you mean to specify the --tf-vars flag?
 Check 1
 
   [AWS018][ERROR] Resource 'aws_security_group.sg' should include a description for auditing purposes.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/tfvars/main.tf:35-43
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/tfvars/main.tf:35-43
 
       32 |   }
       33 | }
@@ -28,7 +28,7 @@ Check 1
 Check 2
 
   [AWS012][ERROR] Resource 'aws_instance.test' has a public IP address associated.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/tfvars/main.tf:67
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/tfvars/main.tf:67
 
       64 |   instance_type = "t2.micro"
       65 |   subnet_id     = aws_subnet.subnet.id
@@ -41,10 +41,10 @@ Check 2
 
   times
   ------------------------------------------
-  disk i/o             654.207µs
-  parsing HCL          5.5µs
-  evaluating values    75.916µs
-  running checks       275.375µs
+  disk i/o             1.351292ms
+  parsing HCL          4.291µs
+  evaluating values    73.001µs
+  running checks       344.792µs
 
   counts
   ------------------------------------------

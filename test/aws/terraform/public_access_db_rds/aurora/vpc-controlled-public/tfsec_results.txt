@@ -2,7 +2,7 @@
 Check 1
 
   [AWS008][WARNING] Resource 'aws_security_group.nondefault' defines a fully open ingress security group.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_db_rds/aurora/vpc-controlled-public/main.tf:19
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_db_rds/aurora/vpc-controlled-public/main.tf:19
 
       16 |     from_port = 0
       17 |     protocol = "TCP"
@@ -17,7 +17,7 @@ Check 1
 Check 2
 
   [AWS018][ERROR] Resource 'aws_security_group.nondefault' should include a description for auditing purposes.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_db_rds/aurora/vpc-controlled-public/main.tf:12-21
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_db_rds/aurora/vpc-controlled-public/main.tf:12-21
 
        9 |   enable_dns_hostnames = true
       10 | }
@@ -41,7 +41,7 @@ Check 2
 Check 3
 
   [AWS051][ERROR] Resource 'aws_rds_cluster.test' defines a disabled RDS Cluster encryption.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_db_rds/aurora/vpc-controlled-public/main.tf:63-68
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_db_rds/aurora/vpc-controlled-public/main.tf:63-68
 
       60 | 
       61 | }
@@ -61,7 +61,7 @@ Check 3
 Check 4
 
   [GEN003][WARNING] Block 'aws_rds_cluster.test' includes a potentially sensitive attribute which is defined within the project.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_db_rds/aurora/vpc-controlled-public/main.tf:67
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_db_rds/aurora/vpc-controlled-public/main.tf:67
 
       64 |   db_subnet_group_name = aws_db_subnet_group.nondefault.name
       65 |   vpc_security_group_ids = [aws_security_group.nondefault.id]
@@ -76,7 +76,7 @@ Check 4
 Check 5
 
   [AWS011][WARNING] Resource 'aws_rds_cluster_instance.ins1' is exposed publicly.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_db_rds/aurora/vpc-controlled-public/main.tf:76
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_db_rds/aurora/vpc-controlled-public/main.tf:76
 
       73 |   instance_class = "db.r4.large"
       74 |   engine             = aws_rds_cluster.test.engine
@@ -91,7 +91,7 @@ Check 5
 Check 6
 
   [AWS011][WARNING] Resource 'aws_rds_cluster_instance.ins2' is exposed publicly.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_db_rds/aurora/vpc-controlled-public/main.tf:85
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_db_rds/aurora/vpc-controlled-public/main.tf:85
 
       82 |   instance_class = "db.r4.large"
       83 |   engine             = aws_rds_cluster.test.engine
@@ -103,10 +103,10 @@ Check 6
 
   times
   ------------------------------------------
-  disk i/o             911.375µs
-  parsing HCL          4.75µs
-  evaluating values    183.499µs
-  running checks       616.709µs
+  disk i/o             868µs
+  parsing HCL          6.708µs
+  evaluating values    172.042µs
+  running checks       543.875µs
 
   counts
   ------------------------------------------

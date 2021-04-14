@@ -2,7 +2,7 @@
 Check 1
 
   [AWS009][WARNING] Resource 'aws_security_group.default' defines a fully open egress security group.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_security_group_rule_include_description_rule/multiple_items_for_rules/main.tf:32
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_security_group_rule_include_description_rule/multiple_items_for_rules/main.tf:32
 
       29 |     from_port   = 0
       30 |     to_port     = 0
@@ -17,7 +17,7 @@ Check 1
 Check 2
 
   [AWS009][WARNING] Resource 'aws_security_group.default_2' defines a fully open egress security group.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_security_group_rule_include_description_rule/multiple_items_for_rules/main.tf:93
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_security_group_rule_include_description_rule/multiple_items_for_rules/main.tf:93
 
       90 |     from_port   = 0
       91 |     to_port     = 0
@@ -31,10 +31,10 @@ Check 2
 
   times
   ------------------------------------------
-  disk i/o             981.209µs
-  parsing HCL          5.292µs
-  evaluating values    95.75µs
-  running checks       594.667µs
+  disk i/o             805.168µs
+  parsing HCL          4.875µs
+  evaluating values    90.875µs
+  running checks       393.708µs
 
   counts
   ------------------------------------------

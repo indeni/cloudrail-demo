@@ -2,7 +2,7 @@
 Check 1
 
   [AWS009][WARNING] Resource 'aws_security_group.internet-access-sg' defines a fully open egress security group.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/vpc_endpoint_ec2_exposure_rule/ec2-service-do-not-exist/main.tf:88
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/vpc_endpoint_ec2_exposure_rule/ec2-service-do-not-exist/main.tf:88
 
       85 |     from_port   = 0
       86 |     to_port     = 0
@@ -16,10 +16,10 @@ Check 1
 
   times
   ------------------------------------------
-  disk i/o             840.04µs
-  parsing HCL          5.083µs
-  evaluating values    98.541µs
-  running checks       263.875µs
+  disk i/o             578.625µs
+  parsing HCL          6.334µs
+  evaluating values    96.792µs
+  running checks       240.125µs
 
   counts
   ------------------------------------------

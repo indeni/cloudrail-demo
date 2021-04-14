@@ -2,7 +2,7 @@
 Check 1
 
   [AWS015][ERROR] Resource 'aws_sqs_queue.cloudrail' defines an unencrypted SQS queue.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_sqs_queues_encrypted_at_rest_rule/no_encryption/main.tf:5-7
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_sqs_queues_encrypted_at_rest_rule/no_encryption/main.tf:5-7
 
        2 |   region = "us-east-1"
        3 | }
@@ -16,10 +16,10 @@ Check 1
 
   times
   ------------------------------------------
-  disk i/o             618.125µs
-  parsing HCL          5.166µs
-  evaluating values    31.75µs
-  running checks       119.625µs
+  disk i/o             478.291µs
+  parsing HCL          5.834µs
+  evaluating values    19.667µs
+  running checks       90.875µs
 
   counts
   ------------------------------------------

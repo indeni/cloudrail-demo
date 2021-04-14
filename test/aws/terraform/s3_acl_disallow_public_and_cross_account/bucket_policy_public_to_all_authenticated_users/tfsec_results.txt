@@ -2,7 +2,7 @@
 Check 1
 
   [AWS002][ERROR] Resource 'aws_s3_bucket.public-bucket' does not have logging enabled.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/s3_acl_disallow_public_and_cross_account/bucket_policy_public_to_all_authenticated_users/main.tf:5-7
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/s3_acl_disallow_public_and_cross_account/bucket_policy_public_to_all_authenticated_users/main.tf:5-7
 
        2 |   region = "us-east-1"
        3 | }
@@ -19,7 +19,7 @@ Check 1
 Check 2
 
   [AWS017][ERROR] Resource 'aws_s3_bucket.public-bucket' defines an unencrypted S3 bucket (missing server_side_encryption_configuration block).
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/s3_acl_disallow_public_and_cross_account/bucket_policy_public_to_all_authenticated_users/main.tf:5-7
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/s3_acl_disallow_public_and_cross_account/bucket_policy_public_to_all_authenticated_users/main.tf:5-7
 
        2 |   region = "us-east-1"
        3 | }
@@ -36,7 +36,7 @@ Check 2
 Check 3
 
   [AWS077][ERROR] Resource 'aws_s3_bucket.public-bucket' does not have versioning enabled
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/s3_acl_disallow_public_and_cross_account/bucket_policy_public_to_all_authenticated_users/main.tf:5-7
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/s3_acl_disallow_public_and_cross_account/bucket_policy_public_to_all_authenticated_users/main.tf:5-7
 
        2 |   region = "us-east-1"
        3 | }
@@ -52,10 +52,10 @@ Check 3
 
   times
   ------------------------------------------
-  disk i/o             508.374µs
-  parsing HCL          3.5µs
-  evaluating values    36.75µs
-  running checks       209.75µs
+  disk i/o             487.041µs
+  parsing HCL          3.542µs
+  evaluating values    37.042µs
+  running checks       262.333µs
 
   counts
   ------------------------------------------

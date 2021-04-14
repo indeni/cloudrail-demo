@@ -2,7 +2,7 @@
 Check 1
 
   [AWS015][ERROR] Resource 'module.public-vpc:aws_sqs_queue.test-queue' defines an unencrypted SQS queue.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/vpc_endpoint_sqs_exposure_rule/sqs-vpc-endpoint-do-not-exist-with-igw/main.tf:10-12
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/vpc_endpoint_sqs_exposure_rule/sqs-vpc-endpoint-do-not-exist-with-igw/main.tf:10-12
 
        7 |   all-subnets-azs = ["a"]
        8 | }
@@ -17,7 +17,7 @@ Check 1
 Check 2
 
   [AWS015][ERROR] Resource 'module.public-vpc:module.public-vpc:aws_sqs_queue.test-queue' defines an unencrypted SQS queue.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/vpc_endpoint_sqs_exposure_rule/sqs-vpc-endpoint-do-not-exist-with-igw/main.tf:10-12
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/vpc_endpoint_sqs_exposure_rule/sqs-vpc-endpoint-do-not-exist-with-igw/main.tf:10-12
 
        7 |   all-subnets-azs = ["a"]
        8 | }
@@ -32,7 +32,7 @@ Check 2
 Check 3
 
   [AWS015][ERROR] Resource 'aws_sqs_queue.test-queue' defines an unencrypted SQS queue.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/vpc_endpoint_sqs_exposure_rule/sqs-vpc-endpoint-do-not-exist-with-igw/main.tf:10-12
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/vpc_endpoint_sqs_exposure_rule/sqs-vpc-endpoint-do-not-exist-with-igw/main.tf:10-12
 
        7 |   all-subnets-azs = ["a"]
        8 | }
@@ -46,10 +46,10 @@ Check 3
 
   times
   ------------------------------------------
-  disk i/o             1.649125ms
-  parsing HCL          9.124µs
-  evaluating values    51.834µs
-  running checks       289.583µs
+  disk i/o             925.374µs
+  parsing HCL          8.875µs
+  evaluating values    44.374µs
+  running checks       282.875µs
 
   counts
   ------------------------------------------

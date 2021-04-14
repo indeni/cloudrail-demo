@@ -2,7 +2,7 @@
 Check 1
 
   [AWS002][ERROR] Resource 'aws_s3_bucket.cdn-content' does not have logging enabled.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_cloudfront_distribution_encrypt_in_transit_rule/encrypted/main.tf:10-30
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_cloudfront_distribution_encrypt_in_transit_rule/encrypted/main.tf:10-30
 
        7 |   s3_origin_id = "cloudfront-dist-encrypted-bucket"
        8 | }
@@ -37,7 +37,7 @@ Check 1
 Check 2
 
   [AWS017][ERROR] Resource 'aws_s3_bucket.cdn-content' defines an unencrypted S3 bucket (missing server_side_encryption_configuration block).
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_cloudfront_distribution_encrypt_in_transit_rule/encrypted/main.tf:10-30
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_cloudfront_distribution_encrypt_in_transit_rule/encrypted/main.tf:10-30
 
        7 |   s3_origin_id = "cloudfront-dist-encrypted-bucket"
        8 | }
@@ -72,7 +72,7 @@ Check 2
 Check 3
 
   [AWS077][ERROR] Resource 'aws_s3_bucket.cdn-content' does not have versioning enabled
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_cloudfront_distribution_encrypt_in_transit_rule/encrypted/main.tf:10-30
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_cloudfront_distribution_encrypt_in_transit_rule/encrypted/main.tf:10-30
 
        7 |   s3_origin_id = "cloudfront-dist-encrypted-bucket"
        8 | }
@@ -107,7 +107,7 @@ Check 3
 Check 4
 
   [AWS021][ERROR] Resource 'aws_cloudfront_distribution.s3_distribution' defines outdated SSL/TLS policies (missing minimum_protocol_version attribute)
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_cloudfront_distribution_encrypt_in_transit_rule/encrypted/main.tf:75-77
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_cloudfront_distribution_encrypt_in_transit_rule/encrypted/main.tf:75-77
 
       72 |     }
       73 |   }
@@ -124,7 +124,7 @@ Check 4
 Check 5
 
   [AWS045][WARNING] Resource 'aws_cloudfront_distribution.s3_distribution' does not have a WAF in front of it.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_cloudfront_distribution_encrypt_in_transit_rule/encrypted/main.tf:44-128
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_cloudfront_distribution_encrypt_in_transit_rule/encrypted/main.tf:44-128
 
       41 |   comment = local.name
       42 | }
@@ -221,7 +221,7 @@ Check 5
 Check 6
 
   [AWS071][ERROR] Resource 'aws_cloudfront_distribution.s3_distribution' does not have Access Logging configured
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_cloudfront_distribution_encrypt_in_transit_rule/encrypted/main.tf:44-128
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_cloudfront_distribution_encrypt_in_transit_rule/encrypted/main.tf:44-128
 
       41 |   comment = local.name
       42 | }
@@ -317,10 +317,10 @@ Check 6
 
   times
   ------------------------------------------
-  disk i/o             942.543µs
-  parsing HCL          4.208µs
-  evaluating values    59.542µs
-  running checks       956.709µs
+  disk i/o             718.333µs
+  parsing HCL          4.042µs
+  evaluating values    61.792µs
+  running checks       446µs
 
   counts
   ------------------------------------------

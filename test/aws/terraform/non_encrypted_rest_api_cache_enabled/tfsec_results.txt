@@ -2,7 +2,7 @@
 Check 1
 
   [AWS061][ERROR] Resource 'aws_api_gateway_stage.api_gw_stage' is missing access log settings block.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/non_encrypted_rest_api_cache_enabled/main.tf:44-48
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/non_encrypted_rest_api_cache_enabled/main.tf:44-48
 
       41 |   }
       42 | }
@@ -20,10 +20,10 @@ Check 1
 
   times
   ------------------------------------------
-  disk i/o             773.917µs
-  parsing HCL          4.417µs
-  evaluating values    158.125µs
-  running checks       351.5µs
+  disk i/o             526.667µs
+  parsing HCL          4.083µs
+  evaluating values    160.126µs
+  running checks       215.166µs
 
   counts
   ------------------------------------------

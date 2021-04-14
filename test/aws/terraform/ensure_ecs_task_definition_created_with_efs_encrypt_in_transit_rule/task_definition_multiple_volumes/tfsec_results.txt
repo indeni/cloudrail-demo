@@ -2,7 +2,7 @@
 Check 1
 
   [AWS048][ERROR] Resource 'aws_efs_file_system.test' does not specify if encryption should be used.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_ecs_task_definition_created_with_efs_encrypt_in_transit_rule/task_definition_multiple_volumes/main.tf:5-7
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_ecs_task_definition_created_with_efs_encrypt_in_transit_rule/task_definition_multiple_volumes/main.tf:5-7
 
        2 |   region = "us-east-1"
        3 | }
@@ -19,7 +19,7 @@ Check 1
 Check 2
 
   [AWS048][ERROR] Resource 'aws_efs_file_system.test_2' does not specify if encryption should be used.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_ecs_task_definition_created_with_efs_encrypt_in_transit_rule/task_definition_multiple_volumes/main.tf:9-11
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_ecs_task_definition_created_with_efs_encrypt_in_transit_rule/task_definition_multiple_volumes/main.tf:9-11
 
        6 |   creation_token = "cloudrail-test"
        7 | }
@@ -35,10 +35,10 @@ Check 2
 
   times
   ------------------------------------------
-  disk i/o             562.252µs
-  parsing HCL          3.792µs
-  evaluating values    30.5µs
-  running checks       1.675ms
+  disk i/o             498.417µs
+  parsing HCL          3.542µs
+  evaluating values    28.292µs
+  running checks       231.584µs
 
   counts
   ------------------------------------------

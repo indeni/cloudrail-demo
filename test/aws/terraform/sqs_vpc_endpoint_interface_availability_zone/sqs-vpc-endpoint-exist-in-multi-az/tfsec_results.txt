@@ -2,7 +2,7 @@
 Check 1
 
   [AWS015][ERROR] Resource 'aws_sqs_queue.test-queue' defines an unencrypted SQS queue.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/sqs_vpc_endpoint_interface_availability_zone/sqs-vpc-endpoint-exist-in-multi-az/main.tf:18-20
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/sqs_vpc_endpoint_interface_availability_zone/sqs-vpc-endpoint-exist-in-multi-az/main.tf:18-20
 
       15 |   security_group_ids = [module.public-vpc.public-internet-sg-id]
       16 | }
@@ -17,7 +17,7 @@ Check 1
 Check 2
 
   [AWS015][ERROR] Resource 'module.public-vpc:aws_sqs_queue.test-queue' defines an unencrypted SQS queue.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/sqs_vpc_endpoint_interface_availability_zone/sqs-vpc-endpoint-exist-in-multi-az/main.tf:18-20
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/sqs_vpc_endpoint_interface_availability_zone/sqs-vpc-endpoint-exist-in-multi-az/main.tf:18-20
 
       15 |   security_group_ids = [module.public-vpc.public-internet-sg-id]
       16 | }
@@ -32,7 +32,7 @@ Check 2
 Check 3
 
   [AWS015][ERROR] Resource 'module.public-vpc:module.public-vpc:aws_sqs_queue.test-queue' defines an unencrypted SQS queue.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/sqs_vpc_endpoint_interface_availability_zone/sqs-vpc-endpoint-exist-in-multi-az/main.tf:18-20
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/sqs_vpc_endpoint_interface_availability_zone/sqs-vpc-endpoint-exist-in-multi-az/main.tf:18-20
 
       15 |   security_group_ids = [module.public-vpc.public-internet-sg-id]
       16 | }
@@ -46,10 +46,10 @@ Check 3
 
   times
   ------------------------------------------
-  disk i/o             3.234083ms
-  parsing HCL          12.084µs
-  evaluating values    267.956µs
-  running checks       521.333µs
+  disk i/o             1.423666ms
+  parsing HCL          8.292µs
+  evaluating values    98.375µs
+  running checks       354.333µs
 
   counts
   ------------------------------------------

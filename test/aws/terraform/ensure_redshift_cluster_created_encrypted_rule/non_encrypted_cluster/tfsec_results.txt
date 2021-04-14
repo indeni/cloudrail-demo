@@ -2,7 +2,7 @@
 Check 1
 
   [GEN003][WARNING] Block 'aws_redshift_cluster.test' includes a potentially sensitive attribute which is defined within the project.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_redshift_cluster_created_encrypted_rule/non_encrypted_cluster/main.tf:8
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_redshift_cluster_created_encrypted_rule/non_encrypted_cluster/main.tf:8
 
        5 | resource "aws_redshift_cluster" "test" {
        6 |   cluster_identifier = "redshift-defaults-only"
@@ -16,10 +16,10 @@ Check 1
 
   times
   ------------------------------------------
-  disk i/o             405.708µs
-  parsing HCL          3.167µs
-  evaluating values    22.374µs
-  running checks       100.459µs
+  disk i/o             497.334µs
+  parsing HCL          4.417µs
+  evaluating values    31.541µs
+  running checks       203.583µs
 
   counts
   ------------------------------------------

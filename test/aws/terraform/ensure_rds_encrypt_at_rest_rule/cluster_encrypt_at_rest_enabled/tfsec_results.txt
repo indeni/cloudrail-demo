@@ -2,7 +2,7 @@
 Check 1
 
   [AWS051][ERROR] Resource 'aws_rds_cluster.default' defines a disabled RDS Cluster encryption.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_rds_encrypt_at_rest_rule/cluster_encrypt_at_rest_enabled/main.tf:5-15
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_rds_encrypt_at_rest_rule/cluster_encrypt_at_rest_enabled/main.tf:5-15
 
        2 |   region = "eu-west-1"
        3 | }
@@ -25,7 +25,7 @@ Check 1
 Check 2
 
   [GEN003][WARNING] Block 'aws_rds_cluster.default' includes a potentially sensitive attribute which is defined within the project.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_rds_encrypt_at_rest_rule/cluster_encrypt_at_rest_enabled/main.tf:12
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_rds_encrypt_at_rest_rule/cluster_encrypt_at_rest_enabled/main.tf:12
 
        9 |   availability_zones  = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
       10 |   database_name       = "cloudrail"
@@ -39,10 +39,10 @@ Check 2
 
   times
   ------------------------------------------
-  disk i/o             545.958µs
+  disk i/o             486.75µs
   parsing HCL          3.417µs
-  evaluating values    38.874µs
-  running checks       436.292µs
+  evaluating values    35.208µs
+  running checks       211.875µs
 
   counts
   ------------------------------------------

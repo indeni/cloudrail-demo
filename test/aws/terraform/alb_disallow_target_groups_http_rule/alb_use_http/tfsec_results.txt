@@ -2,7 +2,7 @@
 Check 1
 
   [AWS004][ERROR] Resource 'aws_lb_listener.listener' uses plain HTTP instead of HTTPS.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/alb_disallow_target_groups_http_rule/alb_use_http/main.tf:67-74
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/alb_disallow_target_groups_http_rule/alb_use_http/main.tf:67-74
 
       64 |   vpc_id = aws_vpc.vpc1.id
       65 | }
@@ -23,10 +23,10 @@ Check 1
 
   times
   ------------------------------------------
-  disk i/o             1.093459ms
-  parsing HCL          5.416µs
-  evaluating values    276.25µs
-  running checks       366µs
+  disk i/o             687.875µs
+  parsing HCL          5.625µs
+  evaluating values    157.042µs
+  running checks       352.959µs
 
   counts
   ------------------------------------------

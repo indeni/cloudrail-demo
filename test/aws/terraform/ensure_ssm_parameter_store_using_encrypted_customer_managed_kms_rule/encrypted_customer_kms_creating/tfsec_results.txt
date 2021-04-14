@@ -2,7 +2,7 @@
 Check 1
 
   [AWS019][WARNING] Resource 'aws_kms_key.test' does not have KMS Key auto-rotation enabled.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_ssm_parameter_store_using_encrypted_customer_managed_kms_rule/encrypted_customer_kms_creating/main.tf:5-8
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_ssm_parameter_store_using_encrypted_customer_managed_kms_rule/encrypted_customer_kms_creating/main.tf:5-8
 
        2 |   region = "us-east-1"
        3 | }
@@ -19,10 +19,10 @@ Check 1
 
   times
   ------------------------------------------
-  disk i/o             1.612625ms
-  parsing HCL          3.917µs
-  evaluating values    34.125µs
-  running checks       124.208µs
+  disk i/o             620.168µs
+  parsing HCL          3.667µs
+  evaluating values    37.917µs
+  running checks       196.458µs
 
   counts
   ------------------------------------------

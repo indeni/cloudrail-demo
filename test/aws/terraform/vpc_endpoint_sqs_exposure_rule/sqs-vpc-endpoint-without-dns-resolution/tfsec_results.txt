@@ -2,7 +2,7 @@
 Check 1
 
   [AWS009][WARNING] Resource 'aws_security_group.public-internet-sg' defines a fully open egress security group.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/vpc_endpoint_sqs_exposure_rule/sqs-vpc-endpoint-without-dns-resolution/main.tf:59
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/vpc_endpoint_sqs_exposure_rule/sqs-vpc-endpoint-without-dns-resolution/main.tf:59
 
       56 |     from_port   = 0
       57 |     to_port     = 0
@@ -17,7 +17,7 @@ Check 1
 Check 2
 
   [AWS015][ERROR] Resource 'aws_sqs_queue.test-queue' defines an unencrypted SQS queue.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/vpc_endpoint_sqs_exposure_rule/sqs-vpc-endpoint-without-dns-resolution/main.tf:103-105
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/vpc_endpoint_sqs_exposure_rule/sqs-vpc-endpoint-without-dns-resolution/main.tf:103-105
 
      100 |   security_group_ids = [aws_security_group.public-internet-sg.id]
      101 | }
@@ -33,10 +33,10 @@ Check 2
 
   times
   ------------------------------------------
-  disk i/o             1.212667ms
-  parsing HCL          4.833µs
-  evaluating values    230.083µs
-  running checks       545.541µs
+  disk i/o             861.333µs
+  parsing HCL          6.583µs
+  evaluating values    116.374µs
+  running checks       376.416µs
 
   counts
   ------------------------------------------

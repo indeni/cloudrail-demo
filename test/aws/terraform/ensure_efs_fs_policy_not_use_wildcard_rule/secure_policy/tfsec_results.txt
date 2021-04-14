@@ -2,7 +2,7 @@
 Check 1
 
   [AWS048][ERROR] Resource 'aws_efs_file_system.secure' does not specify if encryption should be used.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_efs_fs_policy_not_use_wildcard_rule/secure_policy/main.tf:5-11
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_efs_fs_policy_not_use_wildcard_rule/secure_policy/main.tf:5-11
 
        2 |   region = "us-east-1"
        3 | }
@@ -22,10 +22,10 @@ Check 1
 
   times
   ------------------------------------------
-  disk i/o             749.541µs
-  parsing HCL          3.375µs
-  evaluating values    40.416µs
-  running checks       196.792µs
+  disk i/o             638.709µs
+  parsing HCL          3.541µs
+  evaluating values    46.291µs
+  running checks       170.5µs
 
   counts
   ------------------------------------------

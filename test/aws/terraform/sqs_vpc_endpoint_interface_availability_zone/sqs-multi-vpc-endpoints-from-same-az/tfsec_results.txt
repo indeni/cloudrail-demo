@@ -1,23 +1,8 @@
 
 Check 1
 
-  [AWS009][WARNING] Resource 'aws_security_group.internet-access-sg' defines a fully open egress security group.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/sqs_vpc_endpoint_interface_availability_zone/sqs-multi-vpc-endpoints-from-same-az/main.tf:105
-
-     102 |     from_port   = 0
-     103 |     to_port     = 0
-     104 |     protocol    = "-1"
-     105 |     cidr_blocks = [local.quad_zero_cidr_block]
-     106 |   }
-     107 | 
-     108 |   ingress {
-
-   See https://tfsec.dev/docs/aws/AWS009/ for more information. 
-
-Check 2
-
   [AWS015][ERROR] Resource 'aws_sqs_queue.test-queue' defines an unencrypted SQS queue.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/sqs_vpc_endpoint_interface_availability_zone/sqs-multi-vpc-endpoints-from-same-az/main.tf:158-160
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/sqs_vpc_endpoint_interface_availability_zone/sqs-multi-vpc-endpoints-from-same-az/main.tf:158-160
 
      155 |   security_group_ids = [aws_security_group.internet-access-sg.id]
      156 | }
@@ -29,12 +14,27 @@ Check 2
 
    See https://tfsec.dev/docs/aws/AWS015/ for more information. 
 
+Check 2
+
+  [AWS009][WARNING] Resource 'aws_security_group.internet-access-sg' defines a fully open egress security group.
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/sqs_vpc_endpoint_interface_availability_zone/sqs-multi-vpc-endpoints-from-same-az/main.tf:105
+
+     102 |     from_port   = 0
+     103 |     to_port     = 0
+     104 |     protocol    = "-1"
+     105 |     cidr_blocks = [local.quad_zero_cidr_block]
+     106 |   }
+     107 | 
+     108 |   ingress {
+
+   See https://tfsec.dev/docs/aws/AWS009/ for more information. 
+
   times
   ------------------------------------------
-  disk i/o             1.269167ms
-  parsing HCL          7.708µs
-  evaluating values    369.625µs
-  running checks       517.625µs
+  disk i/o             816.832µs
+  parsing HCL          5.125µs
+  evaluating values    164.124µs
+  running checks       552µs
 
   counts
   ------------------------------------------

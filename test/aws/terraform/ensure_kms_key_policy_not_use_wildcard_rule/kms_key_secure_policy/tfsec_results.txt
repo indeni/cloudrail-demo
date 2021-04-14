@@ -2,7 +2,7 @@
 Check 1
 
   [AWS019][WARNING] Resource 'aws_kms_key.secure_policy' does not have KMS Key auto-rotation enabled.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_kms_key_policy_not_use_wildcard_rule/kms_key_secure_policy/main.tf:5-38
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_kms_key_policy_not_use_wildcard_rule/kms_key_secure_policy/main.tf:5-38
 
        2 |   region = "us-east-1"
        3 | }
@@ -46,10 +46,10 @@ Check 1
 
   times
   ------------------------------------------
-  disk i/o             659.165µs
-  parsing HCL          3.584µs
-  evaluating values    29.376µs
-  running checks       143.583µs
+  disk i/o             514.957µs
+  parsing HCL          4.708µs
+  evaluating values    42.875µs
+  running checks       110.5µs
 
   counts
   ------------------------------------------

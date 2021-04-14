@@ -1,10 +1,10 @@
 
   times
   ------------------------------------------
-  disk i/o             80.428792ms
-  parsing HCL          526.169µs
-  evaluating values    150.481086ms
-  running checks       24.526959ms
+  disk i/o             76.073499ms
+  parsing HCL          348.168µs
+  evaluating values    161.419334ms
+  running checks       32.101459ms
 
   counts
   ------------------------------------------

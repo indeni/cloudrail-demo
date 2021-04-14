@@ -2,7 +2,7 @@
 Check 1
 
   [AWS018][ERROR] Resource 'aws_security_group.nondefault' should include a description for auditing purposes.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_db_neptune_rule/vpc_non_default/main.tf:9-11
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_db_neptune_rule/vpc_non_default/main.tf:9-11
 
        6 |   cidr_block = "10.1.1.0/24"
        7 | }
@@ -18,10 +18,10 @@ Check 1
 
   times
   ------------------------------------------
-  disk i/o             868.833µs
-  parsing HCL          5µs
-  evaluating values    109.833µs
-  running checks       217.125µs
+  disk i/o             650.834µs
+  parsing HCL          4.375µs
+  evaluating values    109.584µs
+  running checks       243.667µs
 
   counts
   ------------------------------------------

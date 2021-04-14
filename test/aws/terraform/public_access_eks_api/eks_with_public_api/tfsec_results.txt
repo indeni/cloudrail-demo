@@ -1,8 +1,8 @@
 
 Check 1
 
-  [AWS067][ERROR] Resource 'module.my-cluster:aws_eks_cluster.this' is missing the control plane log type 'api'
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:12
+  [AWS067][ERROR] Resource 'module.my-cluster:aws_eks_cluster.this' is missing the control plane log type 'controllerManager'
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:12
 
        9 | resource "aws_eks_cluster" "this" {
       10 |   count                     = var.create_eks ? 1 : 0
@@ -16,8 +16,8 @@ Check 1
 
 Check 2
 
-  [AWS067][ERROR] Resource 'module.my-cluster:aws_eks_cluster.this' is missing the control plane log type 'audit'
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:12
+  [AWS067][ERROR] Resource 'module.my-cluster:aws_eks_cluster.this' is missing the control plane log type 'scheduler'
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:12
 
        9 | resource "aws_eks_cluster" "this" {
       10 |   count                     = var.create_eks ? 1 : 0
@@ -31,38 +31,8 @@ Check 2
 
 Check 3
 
-  [AWS067][ERROR] Resource 'module.my-cluster:aws_eks_cluster.this' is missing the control plane log type 'controllerManager'
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:12
-
-       9 | resource "aws_eks_cluster" "this" {
-      10 |   count                     = var.create_eks ? 1 : 0
-      11 |   name                      = var.cluster_name
-      12 |   enabled_cluster_log_types = var.cluster_enabled_log_types
-      13 |   role_arn                  = local.cluster_iam_role_arn
-      14 |   version                   = var.cluster_version
-      15 |   tags                      = var.tags
-
-   See https://tfsec.dev/docs/aws/AWS067/ for more information. 
-
-Check 4
-
-  [AWS067][ERROR] Resource 'module.my-cluster:aws_eks_cluster.this' is missing the control plane log type 'scheduler'
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:12
-
-       9 | resource "aws_eks_cluster" "this" {
-      10 |   count                     = var.create_eks ? 1 : 0
-      11 |   name                      = var.cluster_name
-      12 |   enabled_cluster_log_types = var.cluster_enabled_log_types
-      13 |   role_arn                  = local.cluster_iam_role_arn
-      14 |   version                   = var.cluster_version
-      15 |   tags                      = var.tags
-
-   See https://tfsec.dev/docs/aws/AWS067/ for more information. 
-
-Check 5
-
   [AWS068][ERROR] Resource 'module.my-cluster:aws_eks_cluster.this' has public access cidr explicitly set to wide open
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:22
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:22
 
       19 |     subnet_ids              = var.subnets
       20 |     endpoint_private_access = var.cluster_endpoint_private_access
@@ -74,10 +44,10 @@ Check 5
 
    See https://tfsec.dev/docs/aws/AWS068/ for more information. 
 
-Check 6
+Check 4
 
   [AWS069][ERROR] Resource 'module.my-cluster:aws_eks_cluster.this' has public access is explicitly set to enabled
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:21
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:21
 
       18 |     security_group_ids      = compact([local.cluster_security_group_id])
       19 |     subnet_ids              = var.subnets
@@ -89,40 +59,25 @@ Check 6
 
    See https://tfsec.dev/docs/aws/AWS069/ for more information. 
 
-Check 7
+Check 5
 
-  [AWS008][WARNING] Resource 'aws_security_group.cluster' defines a fully open ingress security group.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/main.tf:41
+  [AWS007][WARNING] Resource 'module.my-cluster:aws_security_group_rule.cluster_egress_internet' defines a fully open egress security group rule.
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:102
 
-      38 |     from_port = 443
-      39 |     protocol = "TCP"
-      40 |     to_port = 443
-      41 |     cidr_blocks = ["0.0.0.0/0"]
-      42 |   }
-      43 | 
-      44 | }
-
-   See https://tfsec.dev/docs/aws/AWS008/ for more information. 
-
-Check 8
-
-  [AWS007][WARNING] Resource 'module.my-cluster:aws_security_group_rule.workers_egress_internet' defines a fully open egress security group rule.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/workers.tf:335
-
-     332 |   description       = "Allow nodes all egress to the Internet."
-     333 |   protocol          = "-1"
-     334 |   security_group_id = local.worker_security_group_id
-     335 |   cidr_blocks       = ["0.0.0.0/0"]
-     336 |   from_port         = 0
-     337 |   to_port           = 0
-     338 |   type              = "egress"
+      99 |   description       = "Allow cluster egress access to the Internet."
+     100 |   protocol          = "-1"
+     101 |   security_group_id = local.cluster_security_group_id
+     102 |   cidr_blocks       = ["0.0.0.0/0"]
+     103 |   from_port         = 0
+     104 |   to_port           = 0
+     105 |   type              = "egress"
 
    See https://tfsec.dev/docs/aws/AWS007/ for more information. 
 
-Check 9
+Check 6
 
   [AWS066][ERROR] Resource 'module.my-cluster:aws_eks_cluster.this' has no encryption_config block
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:9-53
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:9-53
 
        6 |   tags              = var.tags
        7 | }
@@ -178,10 +133,10 @@ Check 9
 
    See https://tfsec.dev/docs/aws/AWS066/ for more information. 
 
-Check 10
+Check 7
 
-  [AWS067][ERROR] Resource 'module.my-cluster:aws_eks_cluster.this' is missing the control plane log type 'authenticator'
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:12
+  [AWS067][ERROR] Resource 'module.my-cluster:aws_eks_cluster.this' is missing the control plane log type 'api'
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:12
 
        9 | resource "aws_eks_cluster" "this" {
       10 |   count                     = var.create_eks ? 1 : 0
@@ -193,10 +148,25 @@ Check 10
 
    See https://tfsec.dev/docs/aws/AWS067/ for more information. 
 
-Check 11
+Check 8
+
+  [AWS067][ERROR] Resource 'module.my-cluster:aws_eks_cluster.this' is missing the control plane log type 'audit'
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:12
+
+       9 | resource "aws_eks_cluster" "this" {
+      10 |   count                     = var.create_eks ? 1 : 0
+      11 |   name                      = var.cluster_name
+      12 |   enabled_cluster_log_types = var.cluster_enabled_log_types
+      13 |   role_arn                  = local.cluster_iam_role_arn
+      14 |   version                   = var.cluster_version
+      15 |   tags                      = var.tags
+
+   See https://tfsec.dev/docs/aws/AWS067/ for more information. 
+
+Check 9
 
   [AWS018][ERROR] Resource 'module.my-cluster:aws_security_group_rule.cluster_private_access' should include a description for auditing purposes.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:55-64
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:55-64
 
       52 |   ]
       53 | }
@@ -217,25 +187,40 @@ Check 11
 
    See https://tfsec.dev/docs/aws/AWS018/ for more information. 
 
-Check 12
+Check 10
 
-  [AWS007][WARNING] Resource 'module.my-cluster:aws_security_group_rule.cluster_egress_internet' defines a fully open egress security group rule.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:102
+  [AWS007][WARNING] Resource 'module.my-cluster:aws_security_group_rule.workers_egress_internet' defines a fully open egress security group rule.
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/workers.tf:335
 
-      99 |   description       = "Allow cluster egress access to the Internet."
-     100 |   protocol          = "-1"
-     101 |   security_group_id = local.cluster_security_group_id
-     102 |   cidr_blocks       = ["0.0.0.0/0"]
-     103 |   from_port         = 0
-     104 |   to_port           = 0
-     105 |   type              = "egress"
+     332 |   description       = "Allow nodes all egress to the Internet."
+     333 |   protocol          = "-1"
+     334 |   security_group_id = local.worker_security_group_id
+     335 |   cidr_blocks       = ["0.0.0.0/0"]
+     336 |   from_port         = 0
+     337 |   to_port           = 0
+     338 |   type              = "egress"
 
    See https://tfsec.dev/docs/aws/AWS007/ for more information. 
 
-Check 13
+Check 11
+
+  [AWS008][WARNING] Resource 'aws_security_group.cluster' defines a fully open ingress security group.
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/main.tf:41
+
+      38 |     from_port = 443
+      39 |     protocol = "TCP"
+      40 |     to_port = 443
+      41 |     cidr_blocks = ["0.0.0.0/0"]
+      42 |   }
+      43 | 
+      44 | }
+
+   See https://tfsec.dev/docs/aws/AWS008/ for more information. 
+
+Check 12
 
   [AWS018][ERROR] Resource 'aws_security_group.cluster' should include a description for auditing purposes.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/main.tf:35-44
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/main.tf:35-44
 
       32 |   version                = "~> 1.9"
       33 | }
@@ -256,12 +241,27 @@ Check 13
 
    See https://tfsec.dev/docs/aws/AWS018/ for more information. 
 
+Check 13
+
+  [AWS067][ERROR] Resource 'module.my-cluster:aws_eks_cluster.this' is missing the control plane log type 'authenticator'
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_eks_api/eks_with_public_api/.terraform/modules/my-cluster/cluster.tf:12
+
+       9 | resource "aws_eks_cluster" "this" {
+      10 |   count                     = var.create_eks ? 1 : 0
+      11 |   name                      = var.cluster_name
+      12 |   enabled_cluster_log_types = var.cluster_enabled_log_types
+      13 |   role_arn                  = local.cluster_iam_role_arn
+      14 |   version                   = var.cluster_version
+      15 |   tags                      = var.tags
+
+   See https://tfsec.dev/docs/aws/AWS067/ for more information. 
+
   times
   ------------------------------------------
-  disk i/o             75.554251ms
-  parsing HCL          341.002µs
-  evaluating values    111.684292ms
-  running checks       20.5515ms
+  disk i/o             60.393375ms
+  parsing HCL          191.664µs
+  evaluating values    88.6715ms
+  running checks       15.864375ms
 
   counts
   ------------------------------------------

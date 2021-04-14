@@ -1,23 +1,8 @@
 
 Check 1
 
-  [AWS015][ERROR] Resource 'aws_sqs_queue.cloudrail' defines an unencrypted SQS queue.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_all_resources_tagged_rule/2_items_without_tags/main.tf:9-11
-
-       6 |   name              = "sns_not_ecnrypted-1"
-       7 | }
-       8 | 
-       9 | resource "aws_sqs_queue" "cloudrail" {
-      10 |   name = "sqs_non_encrypted"
-      11 | }
-      12 | 
-
-   See https://tfsec.dev/docs/aws/AWS015/ for more information. 
-
-Check 2
-
   [AWS016][ERROR] Resource 'aws_sns_topic.cloudrail_1' defines an unencrypted SNS topic.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_all_resources_tagged_rule/2_items_without_tags/main.tf:5-7
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_all_resources_tagged_rule/2_items_without_tags/main.tf:5-7
 
        2 |   region = "us-east-1"
        3 | }
@@ -31,12 +16,27 @@ Check 2
 
    See https://tfsec.dev/docs/aws/AWS016/ for more information. 
 
+Check 2
+
+  [AWS015][ERROR] Resource 'aws_sqs_queue.cloudrail' defines an unencrypted SQS queue.
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_all_resources_tagged_rule/2_items_without_tags/main.tf:9-11
+
+       6 |   name              = "sns_not_ecnrypted-1"
+       7 | }
+       8 | 
+       9 | resource "aws_sqs_queue" "cloudrail" {
+      10 |   name = "sqs_non_encrypted"
+      11 | }
+      12 | 
+
+   See https://tfsec.dev/docs/aws/AWS015/ for more information. 
+
   times
   ------------------------------------------
-  disk i/o             439.209µs
-  parsing HCL          4.375µs
-  evaluating values    31.333µs
-  running checks       181.708µs
+  disk i/o             385.166µs
+  parsing HCL          3.625µs
+  evaluating values    23.917µs
+  running checks       347.584µs
 
   counts
   ------------------------------------------

@@ -2,7 +2,7 @@
 Check 1
 
   [GEN003][WARNING] Block 'aws_redshift_cluster.test' includes a potentially sensitive attribute which is defined within the project.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/disallow_ec2_classic_mode_rule/deploy_redshift_in_ec2_vpc_mode/main.tf:31
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/disallow_ec2_classic_mode_rule/deploy_redshift_in_ec2_vpc_mode/main.tf:31
 
       28 | resource "aws_redshift_cluster" "test" {
       29 |   cluster_identifier = "redshift-defaults-only"
@@ -16,10 +16,10 @@ Check 1
 
   times
   ------------------------------------------
-  disk i/o             818.416µs
-  parsing HCL          5.542µs
-  evaluating values    86.25µs
-  running checks       173.166µs
+  disk i/o             573.334µs
+  parsing HCL          3.625µs
+  evaluating values    85.916µs
+  running checks       210.125µs
 
   counts
   ------------------------------------------

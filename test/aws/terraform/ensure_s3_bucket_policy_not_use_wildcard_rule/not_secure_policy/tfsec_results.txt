@@ -2,7 +2,7 @@
 Check 1
 
   [AWS002][ERROR] Resource 'aws_s3_bucket.public-bucket' does not have logging enabled.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_s3_bucket_policy_not_use_wildcard_rule/not_secure_policy/main.tf:51-58
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_s3_bucket_policy_not_use_wildcard_rule/not_secure_policy/main.tf:51-58
 
       48 |   vpc_endpoint_id = aws_vpc_endpoint.s3-vpce-gw.id
       49 | }
@@ -24,7 +24,7 @@ Check 1
 Check 2
 
   [AWS017][ERROR] Resource 'aws_s3_bucket.public-bucket' defines an unencrypted S3 bucket (missing server_side_encryption_configuration block).
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_s3_bucket_policy_not_use_wildcard_rule/not_secure_policy/main.tf:51-58
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_s3_bucket_policy_not_use_wildcard_rule/not_secure_policy/main.tf:51-58
 
       48 |   vpc_endpoint_id = aws_vpc_endpoint.s3-vpce-gw.id
       49 | }
@@ -46,7 +46,7 @@ Check 2
 Check 3
 
   [AWS077][ERROR] Resource 'aws_s3_bucket.public-bucket' does not have versioning enabled
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_s3_bucket_policy_not_use_wildcard_rule/not_secure_policy/main.tf:51-58
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_s3_bucket_policy_not_use_wildcard_rule/not_secure_policy/main.tf:51-58
 
       48 |   vpc_endpoint_id = aws_vpc_endpoint.s3-vpce-gw.id
       49 | }
@@ -67,10 +67,10 @@ Check 3
 
   times
   ------------------------------------------
-  disk i/o             701.541µs
-  parsing HCL          4.584µs
-  evaluating values    122.958µs
-  running checks       553.083µs
+  disk i/o             635.209µs
+  parsing HCL          4.25µs
+  evaluating values    122.916µs
+  running checks       335.958µs
 
   counts
   ------------------------------------------

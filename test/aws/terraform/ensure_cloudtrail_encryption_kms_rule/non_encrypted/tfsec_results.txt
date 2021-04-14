@@ -2,7 +2,7 @@
 Check 1
 
   [AWS063][WARNING] Resource 'aws_cloudtrail.foobar' does not set multi region trail config.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_cloudtrail_encryption_kms_rule/non_encrypted/main.tf:11-16
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_cloudtrail_encryption_kms_rule/non_encrypted/main.tf:11-16
 
        8 | 
        9 | data "aws_caller_identity" "current" {}
@@ -22,7 +22,7 @@ Check 1
 Check 2
 
   [AWS064][WARNING] Resource 'aws_cloudtrail.foobar' does not enable log file validation.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_cloudtrail_encryption_kms_rule/non_encrypted/main.tf:11-16
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_cloudtrail_encryption_kms_rule/non_encrypted/main.tf:11-16
 
        8 | 
        9 | data "aws_caller_identity" "current" {}
@@ -42,7 +42,7 @@ Check 2
 Check 3
 
   [AWS065][ERROR] Resource 'aws_cloudtrail.foobar' does not have a kms_key_id set.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_cloudtrail_encryption_kms_rule/non_encrypted/main.tf:11-16
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_cloudtrail_encryption_kms_rule/non_encrypted/main.tf:11-16
 
        8 | 
        9 | data "aws_caller_identity" "current" {}
@@ -62,7 +62,7 @@ Check 3
 Check 4
 
   [AWS002][ERROR] Resource 'aws_s3_bucket.foo' does not have logging enabled.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_cloudtrail_encryption_kms_rule/non_encrypted/main.tf:18-52
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_cloudtrail_encryption_kms_rule/non_encrypted/main.tf:18-52
 
       15 |   include_global_service_events = false
       16 | }
@@ -108,7 +108,7 @@ Check 4
 Check 5
 
   [AWS017][ERROR] Resource 'aws_s3_bucket.foo' defines an unencrypted S3 bucket (missing server_side_encryption_configuration block).
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_cloudtrail_encryption_kms_rule/non_encrypted/main.tf:18-52
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_cloudtrail_encryption_kms_rule/non_encrypted/main.tf:18-52
 
       15 |   include_global_service_events = false
       16 | }
@@ -154,7 +154,7 @@ Check 5
 Check 6
 
   [AWS077][ERROR] Resource 'aws_s3_bucket.foo' does not have versioning enabled
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_cloudtrail_encryption_kms_rule/non_encrypted/main.tf:18-52
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_cloudtrail_encryption_kms_rule/non_encrypted/main.tf:18-52
 
       15 |   include_global_service_events = false
       16 | }
@@ -199,10 +199,10 @@ Check 6
 
   times
   ------------------------------------------
-  disk i/o             744.709µs
-  parsing HCL          3.959µs
-  evaluating values    62.041µs
-  running checks       1.805ms
+  disk i/o             643.876µs
+  parsing HCL          6.083µs
+  evaluating values    69.041µs
+  running checks       484.167µs
 
   counts
   ------------------------------------------

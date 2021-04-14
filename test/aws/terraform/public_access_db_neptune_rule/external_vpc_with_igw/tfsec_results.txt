@@ -2,7 +2,7 @@
 Check 1
 
   [AWS008][WARNING] Resource 'aws_security_group.free' defines a fully open ingress security group.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_db_neptune_rule/external_vpc_with_igw/main.tf:25
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_db_neptune_rule/external_vpc_with_igw/main.tf:25
 
       22 |     from_port = 0
       23 |     protocol = "TCP"
@@ -17,7 +17,7 @@ Check 1
 Check 2
 
   [AWS018][ERROR] Resource 'aws_security_group.free' should include a description for auditing purposes.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/public_access_db_neptune_rule/external_vpc_with_igw/main.tf:18-27
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_db_neptune_rule/external_vpc_with_igw/main.tf:18-27
 
       15 |   vpc_id = aws_vpc.external.id
       16 | }
@@ -40,10 +40,10 @@ Check 2
 
   times
   ------------------------------------------
-  disk i/o             915µs
-  parsing HCL          6.333µs
-  evaluating values    164µs
-  running checks       480.375µs
+  disk i/o             667.583µs
+  parsing HCL          4.625µs
+  evaluating values    152.291µs
+  running checks       361.166µs
 
   counts
   ------------------------------------------

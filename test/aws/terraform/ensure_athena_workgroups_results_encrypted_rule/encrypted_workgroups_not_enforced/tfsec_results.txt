@@ -2,7 +2,7 @@
 Check 1
 
   [AWS002][ERROR] Resource 'aws_s3_bucket.cloudrail_anthena_bucket_2' does not have logging enabled.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:35-38
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:35-38
 
       32 |   }
       33 | }
@@ -20,7 +20,7 @@ Check 1
 Check 2
 
   [AWS017][ERROR] Resource 'aws_s3_bucket.cloudrail_anthena_bucket_2' defines an unencrypted S3 bucket (missing server_side_encryption_configuration block).
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:35-38
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:35-38
 
       32 |   }
       33 | }
@@ -38,7 +38,7 @@ Check 2
 Check 3
 
   [AWS077][ERROR] Resource 'aws_s3_bucket.cloudrail_anthena_bucket_2' does not have versioning enabled
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:35-38
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:35-38
 
       32 |   }
       33 | }
@@ -56,7 +56,7 @@ Check 3
 Check 4
 
   [AWS002][ERROR] Resource 'aws_s3_bucket.cloudrail_anthena_bucket' does not have logging enabled.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:5-8
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:5-8
 
        2 |   region = "us-east-1"
        3 | }
@@ -74,7 +74,7 @@ Check 4
 Check 5
 
   [AWS017][ERROR] Resource 'aws_s3_bucket.cloudrail_anthena_bucket' defines an unencrypted S3 bucket (missing server_side_encryption_configuration block).
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:5-8
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:5-8
 
        2 |   region = "us-east-1"
        3 | }
@@ -92,7 +92,7 @@ Check 5
 Check 6
 
   [AWS077][ERROR] Resource 'aws_s3_bucket.cloudrail_anthena_bucket' does not have versioning enabled
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:5-8
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:5-8
 
        2 |   region = "us-east-1"
        3 | }
@@ -110,7 +110,7 @@ Check 6
 Check 7
 
   [AWS060][ERROR] Resource 'aws_athena_workgroup.cloudrail_wg' has enforce_workgroup_configuration set to false.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:21-32
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_athena_workgroups_results_encrypted_rule/encrypted_workgroups_not_enforced/main.tf:21-32
 
       18 | resource "aws_athena_workgroup" "cloudrail_wg" {
       19 |   name = "cloudrail-wg-encrypted-sse-s3"
@@ -135,10 +135,10 @@ Check 7
 
   times
   ------------------------------------------
-  disk i/o             666.458µs
-  parsing HCL          5.792µs
-  evaluating values    58.126µs
-  running checks       634.083µs
+  disk i/o             670.791µs
+  parsing HCL          7.083µs
+  evaluating values    62.166µs
+  running checks       505.666µs
 
   counts
   ------------------------------------------

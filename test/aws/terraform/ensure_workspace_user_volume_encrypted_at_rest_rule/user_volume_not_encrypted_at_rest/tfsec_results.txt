@@ -2,7 +2,7 @@
 Check 1
 
   [GEN003][WARNING] Block 'aws_directory_service_directory.test' includes a potentially sensitive attribute which is defined within the project.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_workspace_user_volume_encrypted_at_rest_rule/user_volume_not_encrypted_at_rest/main.tf:34
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_workspace_user_volume_encrypted_at_rest_rule/user_volume_not_encrypted_at_rest/main.tf:34
 
       31 | 
       32 | resource "aws_directory_service_directory" "test" {
@@ -16,10 +16,10 @@ Check 1
 
   times
   ------------------------------------------
-  disk i/o             700.625µs
-  parsing HCL          6.375µs
-  evaluating values    155.792µs
-  running checks       262.959µs
+  disk i/o             702.416µs
+  parsing HCL          5.458µs
+  evaluating values    149.084µs
+  running checks       277.583µs
 
   counts
   ------------------------------------------

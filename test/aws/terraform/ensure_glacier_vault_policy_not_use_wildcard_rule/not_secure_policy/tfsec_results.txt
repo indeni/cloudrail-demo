@@ -2,7 +2,7 @@
 Check 1
 
   [AWS016][ERROR] Resource 'aws_sns_topic.aws_sns_topic' defines an unencrypted SNS topic.
-  /Users/yoni/code/cloudrail-demo/test/aws/terraform/ensure_glacier_vault_policy_not_use_wildcard_rule/not_secure_policy/main.tf:5-7
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ensure_glacier_vault_policy_not_use_wildcard_rule/not_secure_policy/main.tf:5-7
 
        2 |   region = "us-east-1"
        3 | }
@@ -18,10 +18,10 @@ Check 1
 
   times
   ------------------------------------------
-  disk i/o             876.291µs
-  parsing HCL          3.667µs
-  evaluating values    25.291µs
-  running checks       128.792µs
+  disk i/o             798.499µs
+  parsing HCL          3.583µs
+  evaluating values    25.459µs
+  running checks       252.75µs
 
   counts
   ------------------------------------------
