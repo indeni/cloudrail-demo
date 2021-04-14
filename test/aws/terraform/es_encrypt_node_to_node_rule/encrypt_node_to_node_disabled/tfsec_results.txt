@@ -1,8 +1,8 @@
 
-Problem 1
+Check 1
 
   [AWS031][ERROR] Resource 'aws_elasticsearch_domain.example' defines an unencrypted Elasticsearch domain (missing encrypt_at_rest block).
-  /src/main.tf:5-13
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/es_encrypt_node_to_node_rule/encrypt_node_to_node_disabled/main.tf:5-13
 
        2 |   region = "us-east-1"
        3 | }
@@ -19,10 +19,10 @@ Problem 1
 
    See https://tfsec.dev/docs/aws/AWS031/ for more information. 
 
-Problem 2
+Check 2
 
   [AWS032][ERROR] Resource 'aws_elasticsearch_domain.example' defines an Elasticsearch domain with plaintext traffic (missing node_to_node_encryption block).
-  /src/main.tf:5-13
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/es_encrypt_node_to_node_rule/encrypt_node_to_node_disabled/main.tf:5-13
 
        2 |   region = "us-east-1"
        3 | }
@@ -39,10 +39,10 @@ Problem 2
 
    See https://tfsec.dev/docs/aws/AWS032/ for more information. 
 
-Problem 3
+Check 3
 
   [AWS033][ERROR] Resource 'aws_elasticsearch_domain.example' defines an Elasticsearch domain with plaintext traffic (missing domain_endpoint_options block).
-  /src/main.tf:5-13
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/es_encrypt_node_to_node_rule/encrypt_node_to_node_disabled/main.tf:5-13
 
        2 |   region = "us-east-1"
        3 | }
@@ -59,10 +59,10 @@ Problem 3
 
    See https://tfsec.dev/docs/aws/AWS033/ for more information. 
 
-Problem 4
+Check 4
 
   [AWS055][ERROR] Resource 'aws_elasticsearch_domain.example' does not configure node to node encryption on the domain.
-  /src/main.tf:5-13
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/es_encrypt_node_to_node_rule/encrypt_node_to_node_disabled/main.tf:5-13
 
        2 |   region = "us-east-1"
        3 | }
@@ -79,10 +79,10 @@ Problem 4
 
    See https://tfsec.dev/docs/aws/AWS055/ for more information. 
 
-Problem 5
+Check 5
 
   [AWS057][ERROR] Resource 'aws_elasticsearch_domain.example' does not configure logging at rest on the domain.
-  /src/main.tf:5-13
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/es_encrypt_node_to_node_rule/encrypt_node_to_node_disabled/main.tf:5-13
 
        2 |   region = "us-east-1"
        3 | }
@@ -99,11 +99,21 @@ Problem 5
 
    See https://tfsec.dev/docs/aws/AWS057/ for more information. 
 
-  disk i/o             82.897ms
-  parsing HCL          47µs
-  evaluating values    211.9µs
-  running checks       31.4457ms
+  times
+  ------------------------------------------
+  disk i/o             570µs
+  parsing HCL          2.917µs
+  evaluating values    19.042µs
+  running checks       383.916µs
+
+  counts
+  ------------------------------------------
   files loaded         1
+  blocks               2
+  evaluated blocks     2
+  modules              0
+  module blocks        0
+  ignored checks       0
 
 5 potential problems detected.
 

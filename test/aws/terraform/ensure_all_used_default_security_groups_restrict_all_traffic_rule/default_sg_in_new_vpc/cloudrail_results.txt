@@ -4,12 +4,12 @@ Rule: Ensure all used default security groups of every VPC restrict all traffic
  - 1 Resources Exposed:
 -----------------------------------------------
    - Exposed Resource: [aws_instance.ec2] (main.tf:31)
-     Violating Resource: [sg-pseudo-242c2294-7104-4565-a174-cef1367ee9b2]  (Not found in TF)
+     Violating Resource: [sg-pseudo-73f7e98d-113b-4717-a895-46acfe3309d1]  (Not found in TF)
 
      Evidence:
          VPC aws_vpc.vpc
-             | aws_instance.ec2 uses ENI eni-pseudo-751e5a19-435f-47cb-8d6c-bc1a9aa86df5
-             | The ENI is secured by default Security group sg-pseudo-242c2294-7104-4565-a174-cef1367ee9b2 and allows all traffic
+             | aws_instance.ec2 uses ENI eni-pseudo-368bafd9-c90e-4df3-b75b-bd8474e1f820
+             | The ENI is secured by default Security group sg-pseudo-73f7e98d-113b-4717-a895-46acfe3309d1 and allows all traffic
 
 
 -----------------------------------------------
@@ -24,17 +24,6 @@ Rule: Ensure IMDSv2 is used and IMDSv1 is disabled
 
 
 -----------------------------------------------
-Rule: Allow only private AMIs to be used
- - 1 Resources Exposed:
------------------------------------------------
-   - Exposed Resource: [aws_instance.ec2] (main.tf:31)
-     Violating Resource: [ami-07cda0db070313c52]  (Not found in TF)
-
-     Evidence:
-             | The EC2 Instance aws_instance.ec2 uses AMI ami-07cda0db070313c52, which is public
-
-
------------------------------------------------
 Rule: Ensure all data stored in the Launch configuration EBS is securely encrypted
  - 1 Resources Exposed:
 -----------------------------------------------
@@ -43,6 +32,17 @@ Rule: Ensure all data stored in the Launch configuration EBS is securely encrypt
 
      Evidence:
              | This rule evaluated aws_instance.ec2's configuration
+
+
+-----------------------------------------------
+Rule: Allow only private AMIs to be used
+ - 1 Resources Exposed:
+-----------------------------------------------
+   - Exposed Resource: [aws_instance.ec2] (main.tf:31)
+     Violating Resource: [ami-07cda0db070313c52]  (Not found in TF)
+
+     Evidence:
+             | The EC2 Instance aws_instance.ec2 uses AMI ami-07cda0db070313c52, which is public
 
 
 -----------------------------------------------

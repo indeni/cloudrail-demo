@@ -67,3 +67,21 @@ Rule: Ensure CloudTrail trails have log validation enabled
 
 
 -----------------------------------------------
+Rule: Ensure all resources that can be tagged have at least one tag
+ - 2 Resources Exposed:
+-----------------------------------------------
+   - Exposed Resource: [aws_cloudtrail.foobar] (main.tf:11)
+     Violating Resource: [aws_cloudtrail.foobar]  (main.tf:11)
+
+     Evidence:
+             | Resource CloudTrail aws_cloudtrail.foobar does not have any tags set
+
+
+   - Exposed Resource: [aws_s3_bucket.foo] (main.tf:18)
+     Violating Resource: [aws_s3_bucket.foo]  (main.tf:18)
+
+     Evidence:
+             | Resource S3 Bucket aws_s3_bucket.foo does not have any tags set
+
+
+-----------------------------------------------

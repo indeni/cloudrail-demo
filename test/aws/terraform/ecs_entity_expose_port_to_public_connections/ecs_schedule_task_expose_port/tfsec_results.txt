@@ -1,23 +1,8 @@
 
-Problem 1
-
-  [AWS049][WARNING] Resource 'aws_network_acl_rule.inbound-rule' defines a Network ACL rule that allows specific ingress ports from anywhere.
-  /src/main.tf:32
-
-      29 |   egress         = false
-      30 |   protocol       = "tcp"
-      31 |   rule_action    = "allow"
-      32 |   cidr_block     = "0.0.0.0/0"
-      33 |   from_port      = local.web_server_port
-      34 |   to_port        = local.mysql_port
-      35 | }
-
-   See https://tfsec.dev/docs/aws/AWS049/ for more information. 
-
-Problem 2
+Check 1
 
   [AWS008][WARNING] Resource 'aws_security_group.sg' defines a fully open ingress security group.
-  /src/main.tf:77
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ecs_entity_expose_port_to_public_connections/ecs_schedule_task_expose_port/main.tf:77
 
       74 |     from_port   = local.web_server_port
       75 |     to_port     = local.mysql_port
@@ -29,10 +14,10 @@ Problem 2
 
    See https://tfsec.dev/docs/aws/AWS008/ for more information. 
 
-Problem 3
+Check 2
 
   [AWS009][WARNING] Resource 'aws_security_group.sg' defines a fully open egress security group.
-  /src/main.tf:84
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ecs_entity_expose_port_to_public_connections/ecs_schedule_task_expose_port/main.tf:84
 
       81 |     from_port   = 0
       82 |     to_port     = 0
@@ -44,10 +29,10 @@ Problem 3
 
    See https://tfsec.dev/docs/aws/AWS009/ for more information. 
 
-Problem 4
+Check 3
 
   [AWS018][ERROR] Resource 'aws_security_group.sg' should include a description for auditing purposes.
-  /src/main.tf:68-87
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ecs_entity_expose_port_to_public_connections/ecs_schedule_task_expose_port/main.tf:68-87
 
       65 | }
       66 | 
@@ -78,11 +63,36 @@ Problem 4
 
    See https://tfsec.dev/docs/aws/AWS018/ for more information. 
 
-  disk i/o             59.2339ms
-  parsing HCL          39.9µs
-  evaluating values    759.8µs
-  running checks       18.677ms
+Check 4
+
+  [AWS049][WARNING] Resource 'aws_network_acl_rule.inbound-rule' defines a Network ACL rule that allows specific ingress ports from anywhere.
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/ecs_entity_expose_port_to_public_connections/ecs_schedule_task_expose_port/main.tf:32
+
+      29 |   egress         = false
+      30 |   protocol       = "tcp"
+      31 |   rule_action    = "allow"
+      32 |   cidr_block     = "0.0.0.0/0"
+      33 |   from_port      = local.web_server_port
+      34 |   to_port        = local.mysql_port
+      35 | }
+
+   See https://tfsec.dev/docs/aws/AWS049/ for more information. 
+
+  times
+  ------------------------------------------
+  disk i/o             888.375µs
+  parsing HCL          6.667µs
+  evaluating values    153.417µs
+  running checks       714µs
+
+  counts
+  ------------------------------------------
   files loaded         1
+  blocks               16
+  evaluated blocks     16
+  modules              0
+  module blocks        0
+  ignored checks       0
 
 4 potential problems detected.
 

@@ -23,17 +23,6 @@ Rule: Ensure S3 buckets are set to be encrypted at rest
 
 
 -----------------------------------------------
-Rule: Ensure S3 buckets have versioning enabled
- - 1 Resources Exposed:
------------------------------------------------
-   - Exposed Resource: [aws_s3_bucket.cloudrail] (main.tf:5)
-     Violating Resource: [aws_s3_bucket.cloudrail]  (main.tf:5)
-
-     Evidence:
-             | The S3 Bucket aws_s3_bucket.cloudrail does not have versioning enabled
-
-
------------------------------------------------
 Rule: Ensure use of S3 bucket policy, and no action wildcards are being used
  - 1 Resources Exposed:
 -----------------------------------------------

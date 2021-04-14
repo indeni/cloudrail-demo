@@ -38,14 +38,25 @@ Rule: Ensure use of Elasticsearch Service domain policy, and no action wildcards
 
 
 -----------------------------------------------
+Rule: Ensure all resources that can be tagged have at least one tag
+ - 1 Resources Exposed:
+-----------------------------------------------
+   - Exposed Resource: [aws_elasticsearch_domain.example] (main.tf:5)
+     Violating Resource: [aws_elasticsearch_domain.example]  (main.tf:5)
+
+     Evidence:
+             | Resource ElasticSearch Domain aws_elasticsearch_domain.example does not have any tags set
+
+
+-----------------------------------------------
 Rule: Ensure Elasticsearch Domain enforces HTTPS
  - 1 Resources Exposed:
 -----------------------------------------------
-   - Exposed Resource: [aws_s3_bucket.sse-s3-encrypted] (main.tf:5)
-     Violating Resource: [aws_s3_bucket.sse-s3-encrypted]  (main.tf:5)
+   - Exposed Resource: [aws_elasticsearch_domain.example] (main.tf:5)
+     Violating Resource: [aws_elasticsearch_domain.example]  (main.tf:5)
 
      Evidence:
-             | This rule evaluated aws_s3_bucket.sse-s3-encrypted's configuration
+             | This rule evaluated aws_elasticsearch_domain.example's configuration
 
 
 -----------------------------------------------

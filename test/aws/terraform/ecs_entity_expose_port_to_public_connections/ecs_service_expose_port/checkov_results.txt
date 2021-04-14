@@ -5,11 +5,11 @@
  | (__| | | |  __/ (__|   < (_) \ V / 
   \___|_| |_|\___|\___|_|\_\___/ \_/  
                                       
-By bridgecrew.io | version: 1.0.771 
+By bridgecrew.io | version: 2.0.46 
 
 terraform scan results:
 
-Passed checks: 4, Failed checks: 2, Skipped checks: 0
+Passed checks: 5, Failed checks: 2, Skipped checks: 0
 
 Check: CKV_AWS_23: "Ensure every security groups rule has a description"
 	FAILED for resource: aws_security_group.sg
@@ -46,6 +46,5 @@ Check: CKV_AWS_65: "Ensure container insights are enabled on ECS cluster"
 		89 | resource "aws_ecs_cluster" "ecs-cluster" {
 		90 |   name = "ecs-cluster"
 		91 | }
-
 
 

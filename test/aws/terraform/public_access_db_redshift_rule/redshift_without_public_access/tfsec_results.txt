@@ -1,8 +1,8 @@
 
-Problem 1
+Check 1
 
   [AWS008][WARNING] Resource 'aws_security_group.nondefault' defines a fully open ingress security group.
-  /src/main.tf:18
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_db_redshift_rule/redshift_without_public_access/main.tf:18
 
       15 |     from_port = 5439
       16 |     protocol = "TCP"
@@ -14,10 +14,10 @@ Problem 1
 
    See https://tfsec.dev/docs/aws/AWS008/ for more information. 
 
-Problem 2
+Check 2
 
   [AWS018][ERROR] Resource 'aws_security_group.nondefault' should include a description for auditing purposes.
-  /src/main.tf:11-20
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_db_redshift_rule/redshift_without_public_access/main.tf:11-20
 
        8 |   cidr_block = "10.1.1.0/24"
        9 | }
@@ -38,10 +38,10 @@ Problem 2
 
    See https://tfsec.dev/docs/aws/AWS018/ for more information. 
 
-Problem 3
+Check 3
 
   [AWS011][WARNING] Resource 'aws_redshift_cluster.test' is exposed publicly.
-  /src/main.tf:97
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_db_redshift_rule/redshift_without_public_access/main.tf:97
 
       94 |   skip_final_snapshot = true
       95 |   vpc_security_group_ids = [aws_security_group.nondefault.id]
@@ -52,10 +52,10 @@ Problem 3
 
    See https://tfsec.dev/docs/aws/AWS011/ for more information. 
 
-Problem 4
+Check 4
 
   [GEN003][WARNING] Block 'aws_redshift_cluster.test' includes a potentially sensitive attribute which is defined within the project.
-  /src/main.tf:92
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/public_access_db_redshift_rule/redshift_without_public_access/main.tf:92
 
       89 | resource "aws_redshift_cluster" "test" {
       90 |   cluster_identifier = "redshift-defaults-only"
@@ -67,11 +67,21 @@ Problem 4
 
    See https://tfsec.dev/docs/general/GEN003/ for more information. 
 
-  disk i/o             161.5171ms
-  parsing HCL          28.4µs
-  evaluating values    1.0797ms
-  running checks       30.9595ms
+  times
+  ------------------------------------------
+  disk i/o             684.041µs
+  parsing HCL          4.375µs
+  evaluating values    214.791µs
+  running checks       848.041µs
+
+  counts
+  ------------------------------------------
   files loaded         1
+  blocks               14
+  evaluated blocks     14
+  modules              0
+  module blocks        0
+  ignored checks       0
 
 4 potential problems detected.
 

@@ -5,11 +5,11 @@
  | (__| | | |  __/ (__|   < (_) \ V / 
   \___|_| |_|\___|\___|_|\_\___/ \_/  
                                       
-By bridgecrew.io | version: 1.0.771 
+By bridgecrew.io | version: 2.0.46 
 
 terraform scan results:
 
-Passed checks: 3, Failed checks: 4, Skipped checks: 0
+Passed checks: 6, Failed checks: 5, Skipped checks: 0
 
 Check: CKV_AWS_23: "Ensure every security groups rule has a description"
 	FAILED for resource: aws_security_group.nondefault
@@ -28,10 +28,10 @@ Check: CKV_AWS_23: "Ensure every security groups rule has a description"
 		20 | }
 
 
-Check: CKV_AWS_64: "Ensure all data stored in the Redshift cluster is securely encrypted at rest"
+Check: CKV_AWS_71: "Ensure Redshift Cluster logging is enabled"
 	FAILED for resource: aws_redshift_cluster.test
 	File: /main.tf:89-98
-	Guide: https://docs.bridgecrew.io/page/guideline-does-not-exist
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_logging_12
 
 		89 | resource "aws_redshift_cluster" "test" {
 		90 |   cluster_identifier = "redshift-defaults-only"
@@ -45,10 +45,9 @@ Check: CKV_AWS_64: "Ensure all data stored in the Redshift cluster is securely e
 		98 | }
 
 
-Check: CKV_AWS_71: "Ensure Redshift Cluster logging is enabled"
+Check: CKV_AWS_142: "Ensure that Redshift cluster is encrypted by KMS"
 	FAILED for resource: aws_redshift_cluster.test
 	File: /main.tf:89-98
-	Guide: https://docs.bridgecrew.io/docs/bc_aws_logging_12
 
 		89 | resource "aws_redshift_cluster" "test" {
 		90 |   cluster_identifier = "redshift-defaults-only"
@@ -78,5 +77,21 @@ Check: CKV_AWS_87: "Redshift cluster should not be publicly accessible"
 		97 |   publicly_accessible = true
 		98 | }
 
+
+Check: CKV_AWS_64: "Ensure all data stored in the Redshift cluster is securely encrypted at rest"
+	FAILED for resource: aws_redshift_cluster.test
+	File: /main.tf:89-98
+	Guide: https://docs.bridgecrew.io/docs/general_25
+
+		89 | resource "aws_redshift_cluster" "test" {
+		90 |   cluster_identifier = "redshift-defaults-only"
+		91 |   node_type = "dc2.large"
+		92 |   master_password = "Test1234"
+		93 |   master_username = "test"
+		94 |   skip_final_snapshot = true
+		95 |   vpc_security_group_ids = [aws_security_group.nondefault.id]
+		96 |   cluster_subnet_group_name = aws_redshift_subnet_group.nondefault.name
+		97 |   publicly_accessible = true
+		98 | }
 
 

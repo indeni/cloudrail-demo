@@ -1,8 +1,8 @@
 
-Problem 1
+Check 1
 
   [AWS018][ERROR] Resource 'aws_security_group.sg' should include a description for auditing purposes.
-  /src/main.tf:35-43
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/runtime_variables/main.tf:35-43
 
       32 |   }
       33 | }
@@ -22,10 +22,10 @@ Problem 1
 
    See https://tfsec.dev/docs/aws/AWS018/ for more information. 
 
-Problem 2
+Check 2
 
   [AWS012][ERROR] Resource 'aws_instance.test' has a public IP address associated.
-  /src/main.tf:67
+  /Users/acme/code/cloudrail-demo/test/aws/terraform/runtime_variables/main.tf:67
 
       64 |   instance_type = "t2.micro"
       65 |   subnet_id     = aws_subnet.subnet.id
@@ -36,11 +36,21 @@ Problem 2
 
    See https://tfsec.dev/docs/aws/AWS012/ for more information. 
 
-  disk i/o             79.1946ms
-  parsing HCL          145.1µs
-  evaluating values    571.9µs
-  running checks       17.7427ms
+  times
+  ------------------------------------------
+  disk i/o             559.249µs
+  parsing HCL          6.042µs
+  evaluating values    73.416µs
+  running checks       298.75µs
+
+  counts
+  ------------------------------------------
   files loaded         1
+  blocks               10
+  evaluated blocks     10
+  modules              0
+  module blocks        0
+  ignored checks       0
 
 2 potential problems detected.
 

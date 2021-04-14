@@ -5,14 +5,9 @@
  | (__| | | |  __/ (__|   < (_) \ V / 
   \___|_| |_|\___|\___|_|\_\___/ \_/  
                                       
-By bridgecrew.io | version: 1.0.771 
+By bridgecrew.io | version: 2.0.46 
 
 terraform scan results:
 
 Passed checks: 7, Failed checks: 0, Skipped checks: 0
-
-terraform_plan scan results:
-
-Passed checks: 6, Failed checks: 0, Skipped checks: 0
-
 

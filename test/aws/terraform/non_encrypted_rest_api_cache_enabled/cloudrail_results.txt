@@ -22,3 +22,14 @@ Rule: Ensure use of API Gateway endpoint policy, and no action wildcards are bei
 
 
 -----------------------------------------------
+Rule: Ensure all resources that can be tagged have at least one tag
+ - 1 Resources Exposed:
+-----------------------------------------------
+   - Exposed Resource: [aws_api_gateway_rest_api.api_gw] (main.tf:5)
+     Violating Resource: [aws_api_gateway_rest_api.api_gw]  (main.tf:5)
+
+     Evidence:
+             | Resource API Gateway aws_api_gateway_rest_api.api_gw does not have any tags set
+
+
+-----------------------------------------------
