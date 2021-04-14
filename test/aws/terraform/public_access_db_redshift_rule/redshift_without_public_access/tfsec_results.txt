@@ -1,6 +1,35 @@
 
 Problem 1
 
+  [AWS011][WARNING] Resource 'aws_redshift_cluster.test' is exposed publicly.
+  /src/main.tf:97
+
+      94 |   skip_final_snapshot = true
+      95 |   vpc_security_group_ids = [aws_security_group.nondefault.id]
+      96 |   cluster_subnet_group_name = aws_redshift_subnet_group.nondefault.name
+      97 |   publicly_accessible = true
+      98 | }
+      99 | 
+
+   See https://tfsec.dev/docs/aws/AWS011/ for more information. 
+
+Problem 2
+
+  [GEN003][WARNING] Block 'aws_redshift_cluster.test' includes a potentially sensitive attribute which is defined within the project.
+  /src/main.tf:92
+
+      89 | resource "aws_redshift_cluster" "test" {
+      90 |   cluster_identifier = "redshift-defaults-only"
+      91 |   node_type = "dc2.large"
+      92 |   master_password = "Test1234"
+      93 |   master_username = "test"
+      94 |   skip_final_snapshot = true
+      95 |   vpc_security_group_ids = [aws_security_group.nondefault.id]
+
+   See https://tfsec.dev/docs/general/GEN003/ for more information. 
+
+Problem 3
+
   [AWS008][WARNING] Resource 'aws_security_group.nondefault' defines a fully open ingress security group.
   /src/main.tf:18
 
@@ -14,7 +43,7 @@ Problem 1
 
    See https://tfsec.dev/docs/aws/AWS008/ for more information. 
 
-Problem 2
+Problem 4
 
   [AWS018][ERROR] Resource 'aws_security_group.nondefault' should include a description for auditing purposes.
   /src/main.tf:11-20
@@ -38,39 +67,10 @@ Problem 2
 
    See https://tfsec.dev/docs/aws/AWS018/ for more information. 
 
-Problem 3
-
-  [AWS011][WARNING] Resource 'aws_redshift_cluster.test' is exposed publicly.
-  /src/main.tf:97
-
-      94 |   skip_final_snapshot = true
-      95 |   vpc_security_group_ids = [aws_security_group.nondefault.id]
-      96 |   cluster_subnet_group_name = aws_redshift_subnet_group.nondefault.name
-      97 |   publicly_accessible = true
-      98 | }
-      99 | 
-
-   See https://tfsec.dev/docs/aws/AWS011/ for more information. 
-
-Problem 4
-
-  [GEN003][WARNING] Block 'aws_redshift_cluster.test' includes a potentially sensitive attribute which is defined within the project.
-  /src/main.tf:92
-
-      89 | resource "aws_redshift_cluster" "test" {
-      90 |   cluster_identifier = "redshift-defaults-only"
-      91 |   node_type = "dc2.large"
-      92 |   master_password = "Test1234"
-      93 |   master_username = "test"
-      94 |   skip_final_snapshot = true
-      95 |   vpc_security_group_ids = [aws_security_group.nondefault.id]
-
-   See https://tfsec.dev/docs/general/GEN003/ for more information. 
-
-  disk i/o             161.5171ms
-  parsing HCL          28.4µs
-  evaluating values    1.0797ms
-  running checks       30.9595ms
+  disk i/o             39.24ms
+  parsing HCL          572µs
+  evaluating values    5.612ms
+  running checks       12.207ms
   files loaded         1
 
 4 potential problems detected.

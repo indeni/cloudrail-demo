@@ -14,10 +14,10 @@ Problem 1
 
    See https://tfsec.dev/docs/general/GEN003/ for more information. 
 
-  disk i/o             144.8933ms
-  parsing HCL          56.8µs
-  evaluating values    829.4µs
-  running checks       9.4963ms
+  disk i/o             18.051ms
+  parsing HCL          496µs
+  evaluating values    1.927ms
+  running checks       4.446ms
   files loaded         1
 
 1 potential problems detected.

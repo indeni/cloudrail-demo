@@ -8,8 +8,19 @@ Rule: Disallow IAM permissions which can lead to privilege escalation
 
      Evidence:
          aws_iam_role_policy.policy
-             | is applied to aws_iam_role.role.arn
-             |  granting the problematic permissions {'iam:*', 'iam: AttachUser*'} which can allow for privilege escalation
+             | is applied to arn:aws:iam::154724799477:role/role
+             | granting the problematic permissions {'iam: AttachUser*', 'iam:*'} which can allow for privilege escalation
+
+
+-----------------------------------------------
+Rule: Ensure all resources that can be tagged have at least one tag
+ - 1 Resources Exposed:
+-----------------------------------------------
+   - Exposed Resource: [aws_iam_role.role] (main.tf:5)
+     Violating Resource: [aws_iam_role.role]  (main.tf:5)
+
+     Evidence:
+             | Resource IAM Role aws_iam_role.role does not have any tags set
 
 
 -----------------------------------------------

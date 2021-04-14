@@ -11,3 +11,21 @@ Rule: Ensure no human IAM users defined
 
 
 -----------------------------------------------
+Rule: Ensure all resources that can be tagged have at least one tag
+ - 2 Resources Exposed:
+-----------------------------------------------
+   - Exposed Resource: [aws_iam_user.iam_user_2] (main.tf:15)
+     Violating Resource: [aws_iam_user.iam_user_2]  (main.tf:15)
+
+     Evidence:
+             | Resource IAM user aws_iam_user.iam_user_2 does not have any tags set
+
+
+   - Exposed Resource: [aws_iam_user.iam_user_1] (main.tf:5)
+     Violating Resource: [aws_iam_user.iam_user_1]  (main.tf:5)
+
+     Evidence:
+             | Resource IAM user aws_iam_user.iam_user_1 does not have any tags set
+
+
+-----------------------------------------------

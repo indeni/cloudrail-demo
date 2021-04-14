@@ -31,42 +31,6 @@ Rule: Ensure VPC Endpoint for S3 is enabled in all VPCs
 
 
 -----------------------------------------------
-Rule: Ensure S3 buckets are set to be encrypted at rest
- - 2 Resources Exposed:
------------------------------------------------
-   - Exposed Resource: [aws_s3_bucket.cloudrail_anthena_bucket_2] (main.tf:35)
-     Violating Resource: [aws_s3_bucket.cloudrail_anthena_bucket_2]  (main.tf:35)
-
-     Evidence:
-             | The S3 Bucket aws_s3_bucket.cloudrail_anthena_bucket_2 is not set to be encrypted at rest
-
-
-   - Exposed Resource: [aws_s3_bucket.cloudrail_anthena_bucket] (main.tf:5)
-     Violating Resource: [aws_s3_bucket.cloudrail_anthena_bucket]  (main.tf:5)
-
-     Evidence:
-             | The S3 Bucket aws_s3_bucket.cloudrail_anthena_bucket is not set to be encrypted at rest
-
-
------------------------------------------------
-Rule: Ensure S3 buckets have versioning enabled
- - 2 Resources Exposed:
------------------------------------------------
-   - Exposed Resource: [aws_s3_bucket.cloudrail_anthena_bucket_2] (main.tf:35)
-     Violating Resource: [aws_s3_bucket.cloudrail_anthena_bucket_2]  (main.tf:35)
-
-     Evidence:
-             | The S3 Bucket aws_s3_bucket.cloudrail_anthena_bucket_2 does not have versioning enabled
-
-
-   - Exposed Resource: [aws_s3_bucket.cloudrail_anthena_bucket] (main.tf:5)
-     Violating Resource: [aws_s3_bucket.cloudrail_anthena_bucket]  (main.tf:5)
-
-     Evidence:
-             | The S3 Bucket aws_s3_bucket.cloudrail_anthena_bucket does not have versioning enabled
-
-
------------------------------------------------
 Rule: Ensure Athena Workgroup query results being created are set to be encrypted at rest using customer-managed CMKs
  - 2 Resources Exposed:
 -----------------------------------------------
@@ -82,6 +46,24 @@ Rule: Ensure Athena Workgroup query results being created are set to be encrypte
 
      Evidence:
              | The Athena Workgroup aws_athena_workgroup.cloudrail_wg is set to use encrypt at rest but it is not using customer-managed CMKs
+
+
+-----------------------------------------------
+Rule: Ensure S3 buckets are set to be encrypted at rest
+ - 2 Resources Exposed:
+-----------------------------------------------
+   - Exposed Resource: [aws_s3_bucket.cloudrail_anthena_bucket_2] (main.tf:35)
+     Violating Resource: [aws_s3_bucket.cloudrail_anthena_bucket_2]  (main.tf:35)
+
+     Evidence:
+             | The S3 Bucket aws_s3_bucket.cloudrail_anthena_bucket_2 is not set to be encrypted at rest
+
+
+   - Exposed Resource: [aws_s3_bucket.cloudrail_anthena_bucket] (main.tf:5)
+     Violating Resource: [aws_s3_bucket.cloudrail_anthena_bucket]  (main.tf:5)
+
+     Evidence:
+             | The S3 Bucket aws_s3_bucket.cloudrail_anthena_bucket is not set to be encrypted at rest
 
 
 -----------------------------------------------

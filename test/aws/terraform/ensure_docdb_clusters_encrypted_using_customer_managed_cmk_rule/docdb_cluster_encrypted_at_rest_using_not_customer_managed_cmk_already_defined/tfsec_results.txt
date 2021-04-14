@@ -1,0 +1,24 @@
+
+Problem 1
+
+  [GEN003][WARNING] Block 'aws_docdb_cluster.test2' includes a potentially sensitive attribute which is defined within the project.
+  /src/main.tf:13
+
+      10 |   cluster_identifier  = "my-docdb-cluster-test2"
+      11 |   engine              = "docdb"
+      12 |   master_username     = "foo"
+      13 |   master_password     = "mustbeeightchars"
+      14 |   skip_final_snapshot = true
+      15 |   storage_encrypted   = true
+      16 |   kms_key_id          = data.aws_kms_key.test.arn
+
+   See https://tfsec.dev/docs/general/GEN003/ for more information. 
+
+  disk i/o             15.965ms
+  parsing HCL          516µs
+  evaluating values    2.46ms
+  running checks       3.803ms
+  files loaded         1
+
+1 potential problems detected.
+

@@ -5,7 +5,7 @@
  | (__| | | |  __/ (__|   < (_) \ V / 
   \___|_| |_|\___|\___|_|\_\___/ \_/  
                                       
-By bridgecrew.io | version: 1.0.771 
+By bridgecrew.io | version: 2.0.46 
 
 terraform scan results:
 
@@ -61,19 +61,4 @@ Check: CKV_AWS_40: "Ensure IAM policies are attached only to groups or roles (Re
 		47 |   }
 		48 |   EOF
 		49 | }
-
-terraform_plan scan results:
-
-Passed checks: 4, Failed checks: 2, Skipped checks: 0
-
-Check: CKV_AWS_40: "Ensure IAM policies are attached only to groups or roles (Reducing access management complexity may in-turn reduce opportunity for a principal to inadvertently receive or retain excessive privileges.)"
-	FAILED for resource: aws_iam_user_policy.allow-policy
-	File: /tf/cached_plan.json:0-0
-	Guide: https://docs.bridgecrew.io/docs/iam_16-iam-policy-privileges-1
-
-Check: CKV_AWS_40: "Ensure IAM policies are attached only to groups or roles (Reducing access management complexity may in-turn reduce opportunity for a principal to inadvertently receive or retain excessive privileges.)"
-	FAILED for resource: aws_iam_user_policy.deny-policy
-	File: /tf/cached_plan.json:0-0
-	Guide: https://docs.bridgecrew.io/docs/iam_16-iam-policy-privileges-1
-
 

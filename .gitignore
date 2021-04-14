@@ -1,4 +1,7 @@
 .terraform
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
 *.plan
 plan.out
 plan.json

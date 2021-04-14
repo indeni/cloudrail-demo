@@ -5,7 +5,7 @@
  | (__| | | |  __/ (__|   < (_) \ V / 
   \___|_| |_|\___|\___|_|\_\___/ \_/  
                                       
-By bridgecrew.io | version: 1.0.771 
+By bridgecrew.io | version: 2.0.46 
 
 terraform scan results:
 
@@ -22,6 +22,5 @@ Check: CKV_AWS_47: "Ensure DAX is encrypted at rest (default is unencrypted)"
 		28 |   node_type          = "dax.r4.large"
 		29 |   replication_factor = 1
 		30 | }
-
 
 
