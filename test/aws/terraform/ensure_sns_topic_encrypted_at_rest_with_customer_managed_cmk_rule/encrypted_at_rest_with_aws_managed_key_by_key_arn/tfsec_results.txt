@@ -1,9 +1,19 @@
 
-  disk i/o             17.853ms
-  parsing HCL          534µs
-  evaluating values    3.541ms
-  running checks       1.519ms
+  times
+  ------------------------------------------
+  disk i/o             591.71µs
+  parsing HCL          3.75µs
+  evaluating values    34.708µs
+  running checks       56.25µs
+
+  counts
+  ------------------------------------------
   files loaded         1
+  blocks               3
+  evaluated blocks     3
+  modules              0
+  module blocks        0
+  ignored checks       0
 
 No problems detected!
 
