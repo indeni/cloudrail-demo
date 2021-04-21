@@ -94,8 +94,8 @@ NOTES:
   72. [Ensure each Lambda function has a non-infinite log retention](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_lambda_function_has_non_infinite_log_retention_rule)
   73. [Ensure VPC Endpoint for SQS is enabled in all Availability Zones in use a VPC](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/sqs_vpc_endpoint_interface_availability_zone)
   74. [Ensure all resources that can be tagged have at least one tag](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_all_resources_tagged_rule)
-  75. [Ensure VPC Endpoint for EC2 is enabled in all VPCs in use]((https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/vpc_endpoint_ec2_exposure_rule)
-  
+  75. [Ensure VPC Endpoint for EC2 is enabled in all VPCs in use](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/vpc_endpoint_ec2_exposure_rule)
+  76. [Ensure IAM policies pass Access Analyzer policy validation without issues](/test/aws/terraform/access_analyzer_validation_rule)  
 
 
 </details>
