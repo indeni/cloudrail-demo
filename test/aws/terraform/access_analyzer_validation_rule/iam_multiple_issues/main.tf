@@ -32,7 +32,7 @@ resource "aws_iam_role_policy" "allow-policy-1" {
     "Statement": [
       {
         "Action": [
-          "iam: passrole"
+          "iam:passrole"
         ],
         "Effect": "Allow",
         "Resource": "*"
@@ -52,7 +52,7 @@ resource "aws_iam_role_policy" "allow-policy-2" {
     "Statement": [
       {
         "Action": [
-          "lambda: createfunction", "lambda: invokefunc*"
+          "lambda:createfunction", "lambda:invokefunc*"
         ],
         "Effect": "Allow",
         "Resource": "*"
