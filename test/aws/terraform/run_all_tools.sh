@@ -12,6 +12,12 @@ then
   exit 1
 fi
 
+if [ -z "$SNYK_TOKEN" ]
+then
+  echo "To run this script, you'll need to provide the SNYK_TOKEN environment variable."
+  exit 1
+fi
+
 # Generate all plan files
 echo Generating plan files, where they do not exist yet
 find . -name "main.tf" -exec dirname {} \; | grep -v ".terraform" | while read -r test_case; do echo $test_case ; ORG_PATH=$PWD ; cd $test_case ; if [ ! -f plan.out ]; then terraform init ; terraform plan -out=plan.out ; fi ; cd $ORG_PATH; done
@@ -35,6 +41,11 @@ find . -name "main.tf" -exec dirname {} \; | grep -v ".terraform" | while read -
 echo Now running Terrascan on all cases
 brew install terrascan
 find . -name "main.tf" -exec dirname {} \; | grep -v ".terraform" | while read -r test_case; do echo $test_case ; ORG_PATH=$PWD ; cd $test_case ; terrascan scan > terrascan_results.txt ; cd $ORG_PATH; done
+
+# Snyk
+echo Now running Snyk on all cases
+docker pull snyk/snyk-cli:docker
+find . -name "main.tf" -exec dirname {} \; | grep -v ".terraform" | while read -r test_case; do echo $test_case ; ORG_PATH=$PWD ; cd $test_case ; docker run --rm -v "$(pwd):/project" snyk/snyk-cli:docker iac test --experimental /project > snyk_results.txt ; cd $ORG_PATH; done
 
 # Cloudrail
 echo Now running Cloudrail on all cases
