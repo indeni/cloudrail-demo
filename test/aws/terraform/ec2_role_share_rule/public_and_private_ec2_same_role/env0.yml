@@ -6,6 +6,7 @@ deploy:
     terraformPlan:
       after:
         - curl https://cloudrail-cli.s3.amazonaws.com/1.2.130/cli.tar.gz | tar xz
+        - find . -name "cloudrail"
         - >
           LC_ALL=C.UTF-8
           LANG=C.UTF-8
