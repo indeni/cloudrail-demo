@@ -11,6 +11,7 @@ deploy:
         - ls -la cloudrail
         - uname -a
         - readelf -l cloudrail/cloudrail |grep "program interpreter"
+        - stat /lib64/ld-linux-x86-64.so.2
         - cloudrail/cloudrail
         - >
           LC_ALL=C.UTF-8
