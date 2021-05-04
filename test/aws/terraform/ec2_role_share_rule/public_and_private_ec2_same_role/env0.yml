@@ -11,8 +11,6 @@ deploy:
         - ls -la cloudrail
         - uname -a
         - >
-          LC_ALL=C.UTF-8
-          LANG=C.UTF-8
           cloudrail/cloudrail run -p .tf-plan 
           --origin ci 
           --build-link "https://app.env0.com/p/${ENV0_PROJECT_ID}/environments/${ENV0_ENVIRONMENT_ID}"  
