@@ -10,6 +10,7 @@ deploy:
         - chmod +x cloudrail/cloudrail
         - ls -la cloudrail
         - uname -a
+        - readelf -l cloudrail/cloudrail |grep "program interpreter"
         - cloudrail/cloudrail
         - >
           LC_ALL=C.UTF-8
