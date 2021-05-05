@@ -16,3 +16,4 @@ deploy:
           --build-link "https://app.env0.com/p/${ENV0_PROJECT_ID}/environments/${ENV0_ENVIRONMENT_ID}"  
           --execution-source-identifier "${ENV0_ENVIRONMENT_ID}" 
           --auto-approve
+          --cloud-account-name test_for_cloudrail-demo-repo 
