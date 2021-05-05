@@ -5,18 +5,15 @@ deploy:
   steps:
     terraformPlan:
       after:
-        - curl https://cloudrail-cli.s3.amazonaws.com/1.2.130/cli.tar.gz | tar xz
-        - find . -name "cloudrail"
-        - chmod +x cloudrail/cloudrail
-        - ls -la cloudrail
-        - uname -a
-        - readelf -l cloudrail/cloudrail |grep "program interpreter"
-        - stat /lib64/ld-linux-x86-64.so.2
-        - cloudrail/cloudrail
+        - python3 -m ensurepip
+        - pip3 install --no-cache --upgrade pip setuptools
+        - apk add ca-certificates
+        - pip3 install virtualenv
+        - virtualenv myenv
+        - source myenv/bin/activate
+        - pip3 install cloudrail==0.0.1947 --extra-index-url https://indeni.jfrog.io/indeni/api/pypi/cloudrail-cli-pypi-develop/simple
         - >
-          LC_ALL=C.UTF-8
-          LANG=C.UTF-8
-          cloudrail/cloudrail run -p .tf-plan 
+          cloudrail run -p .tf-plan 
           --origin ci 
           --build-link "https://app.env0.com/p/${ENV0_PROJECT_ID}/environments/${ENV0_ENVIRONMENT_ID}"  
           --execution-source-identifier "${ENV0_ENVIRONMENT_ID}" 
