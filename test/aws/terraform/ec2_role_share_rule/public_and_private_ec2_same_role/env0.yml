@@ -6,7 +6,6 @@ deploy:
     terraformPlan:
       after:
         - pip install --no-cache --upgrade pip setuptools
-        - apk add ca-certificates
         - pip install virtualenv
         - virtualenv myenv
         - source myenv/bin/activate
