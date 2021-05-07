@@ -54,6 +54,7 @@ pipeline {
                     cloudrail run --directory . --tf-plan "plan.out" \
                       --origin ci --build-link "${BUILD_URL}"  --execution-source-identifier "${BUILD_NUMBER}"  \
                       --auto-approve
+                      --cloud-account-id $AWS_ACCOUNT_ID
              '''
             }
         }

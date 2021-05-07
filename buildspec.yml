@@ -42,6 +42,7 @@ phases:
         --execution-source-identifier "${CODEBUILD_BUILD_ID}"  
         --output-format junit --output-file /data/cloudrail.result.xml 
         --auto-approve 
+        --cloud-account-id $AWS_ACCOUNT_ID
 
 # The report is accessible via the AWS CodeBuild interface. Each failed test includes details about 
 # what failed and why, and how to fix it. This helps the develoepr easily correct the issue.

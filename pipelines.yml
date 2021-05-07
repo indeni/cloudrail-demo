@@ -73,6 +73,7 @@ pipelines:
               --origin ci
               --build-link "$step_url"
               --execution-source-identifier "$pipeline_name - $run_id"
+              --cloud-account-id $AWS_ACCOUNT_ID
           onComplete:
             - save_tests dependencyState/resources/cloudrail_demo_repo/test/aws/terraform/ec2_role_share_rule/public_and_private_ec2_same_role/cloudrail_results.xml
 
