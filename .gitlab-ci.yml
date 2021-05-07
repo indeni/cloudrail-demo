@@ -49,10 +49,10 @@ cloudrail:
     - |
       if [[ "${GITLAB_FEATURES}" == *"security_dashboard"* ]]; then
         echo "You are licensed for GitLab Security Dashboards, you will find scanning results in Security Dashboard"
-        cloudrail run --tf-plan plan.out --directory . --origin ci --build-link "$CI_PROJECT_URL/-/jobs/$CI_JOB_ID"  --execution-source-identifier "$CI_COMMIT_BRANCH - $CI_JOB_ID" --output-format json-gitlab-sast --output-file ${CI_PROJECT_DIR}/cloudrail-sast-report.json --auto-approve
+        cloudrail run --tf-plan plan.out --directory . --origin ci --build-link "$CI_PROJECT_URL/-/jobs/$CI_JOB_ID"  --execution-source-identifier "$CI_COMMIT_BRANCH - $CI_JOB_ID" --output-format json-gitlab-sast --output-file ${CI_PROJECT_DIR}/cloudrail-sast-report.json --cloud-account-id $AWS_ACCOUNT_ID --auto-approve
       else
         echo "You will find scanning results in the GitLab Test results visualization panel"
-        cloudrail run --tf-plan plan.out --directory . --origin ci --build-link "$CI_PROJECT_URL/-/jobs/$CI_JOB_ID"  --execution-source-identifier "$CI_COMMIT_BRANCH - $CI_JOB_ID" --output-format junit --output-file ${CI_PROJECT_DIR}/cloudrail-junit-report.xml --auto-approve
+        cloudrail run --tf-plan plan.out --directory . --origin ci --build-link "$CI_PROJECT_URL/-/jobs/$CI_JOB_ID"  --execution-source-identifier "$CI_COMMIT_BRANCH - $CI_JOB_ID" --output-format junit --output-file ${CI_PROJECT_DIR}/cloudrail-junit-report.xml --cloud-account-id $AWS_ACCOUNT_ID --auto-approve
       fi
   artifacts:
     reports:
