@@ -3,9 +3,10 @@ All notable changes to this project will be documented in this file.
 ## [1.2.170] - (May 11, 2021)
 ### Added
 Platform Enhancements (2):
-- UI: Filter assessments ![image](https://user-images.githubusercontent.com/71668153/118518823-5edd5500-b6ed-11eb-8fdf-203c5562b6f9.png)
-- UI: Filter assessment details by the violation type ![image](https://user-images.githubusercontent.com/71668153/118518823-5edd5500-b6ed-11eb-8fdf-203c5562b6f9.png)
-- UI: Filter rules by type or severity ![image](https://user-images.githubusercontent.com/71668153/118518823-5edd5500-b6ed-11eb-8fdf-203c5562b6f9.png)
+- UI: Filter assessments ![image](https://user-images.githubusercontent.com/71668153/118539040-c9998b00-b703-11eb-8579-1c014d942059.png)
+- UI: Filter assessment details by the violation type ![image](https://user-images.githubusercontent.com/71668153/118539162-f0f05800-b703-11eb-9622-fa00e393b367.png)
+- UI: Filter rules by type or severity ![image](https://user-images.githubusercontent.com/71668153/118539235-0b2a3600-b704-11eb-8214-55dac91b1ece.png)
+
 
 ## [1.2.161] - (May 8, 2021)
 ### Added
@@ -15,12 +16,14 @@ Context Aware (2):
 - [CR-2099] Ensure unused roles are removed
 
 Platform Enhancements (1):
-- UI: Violated rules will be styled differently based on enforcement level ![image](https://user-images.githubusercontent.com/71668153/118518823-5edd5500-b6ed-11eb-8fdf-203c5562b6f9.png)
+- UI: Violated rules will be styled differently based on enforcement level ![image](https://user-images.githubusercontent.com/71668153/118539329-28f79b00-b704-11eb-9b4a-25d669c5add0.png)
+
 
 ## [1.2.122] - (Apr 26, 2021)
-### Added
+### Added 
 Platform Enhancements (1):
-- UI: Manage users using the new user table: ![image](https://user-images.githubusercontent.com/71668153/118518823-5edd5500-b6ed-11eb-8fdf-203c5562b6f9.png)
+- UI: Manage users using the new user table: ![image](https://user-images.githubusercontent.com/71668153/118540169-2cd7ed00-b705-11eb-8393-57ca2c75a709.png)
+
 
 ## [1.2.113] - (Apr 24, 2021)
 ### Added
@@ -28,7 +31,8 @@ Non-Context Aware (1):
 - [CR-1799] Ensure SageMaker Notebook instances are not publicly accessible
 
 Platform Enhancements (1):
-- UI: Identify assessments by their origin using the origin icon ![image](https://user-images.githubusercontent.com/71668153/118518823-5edd5500-b6ed-11eb-8fdf-203c5562b6f9.png)
+- UI: Identify assessments by their origin using the origin icon ![image](https://user-images.githubusercontent.com/71668153/118540467-77596980-b705-11eb-9f91-94305af7cd79.png)
+
 
 ## [1.2.102] - (Apr 21, 2021)
 ### Added
@@ -57,7 +61,7 @@ Non-Context Aware (1):
 ## [1.2.25] - (Apr 1, 2021)
 ### Added
 Platform Enhancements (1):
-- UI: When onboarding cloudrail to AWS, you can now preview the cloudformation stack that we will use here![image](https://user-images.githubusercontent.com/71668153/118518823-5edd5500-b6ed-11eb-8fdf-203c5562b6f9.png)
+- UI: When onboarding cloudrail to AWS, you can now preview the cloudformation stack that we will use here![image](https://user-images.githubusercontent.com/71668153/118540582-922bde00-b705-11eb-8dfe-97d60a581bc2.png)
 
 For changes made in previous versions:
 - [V1.1](https://github.com/indeni/cloudrail-demo/blob/v1.1/CHANGELOG.md)
