@@ -98,6 +98,14 @@ NOTES:
   76. [Ensure IAM policies pass Access Analyzer policy validation without issues](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/access_analyzer_validation_rule)
   77. [Ensure Sagemaker Endpoint Configurations are set to encrypt data at rest](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_sagemaker_endpoint_config_encrypted_at_rest_rule)
   78. [Ensure no role uses an overly wide principal for assume role policy](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/iam_role_assume_role_principal_too_wide)
-  
+  78. [Ensure Sagemaker Notebook Instances are set to encrypt artifacts at rest with customer-managed CMK](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_sagemaker_notebook_instance_encrypted_at_rest_by_cmk_rule)'
+  79. [Ensure S3 buckets are not indirectly exposed via overly permissive Lambda Function and public API Gateway](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/s3_bucket_lambda_indirect_exposure_rule)
+  80. [Ensure RDS cluster instances being created are set to encrypt the performance insights with customer-managed CMK](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_rds_cluster_instance_encrypt_with_customer_managed_cmk_rule)
+  81. [Ensure Database Migration Service instances are not publicly accessible](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/public_access_dms_replication_instance_rule)
+  82. [Validate IAM policies in IaC using Access Analyzer Policy Validation API](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/access_analyzer_validation_rule)
+  83. [Ensure SageMaker Notebook instances are not publicly accessible](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_no_direct_internet_access_allowed_to_sagemaker_notebook_instance_rule)
+  84. [Report unused security group](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_no_unused_security_groups_rule)
+  85. [Ensure unused roles are removed](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_unused_roles_removed_rule)
+
 
 </details>
