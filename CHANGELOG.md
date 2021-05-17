@@ -3,7 +3,8 @@ All notable changes to this project will be documented in this file.
 ## [1.1.28] - (Mar 24, 2021)
 ### Added
 Platform Enhancements (2):
-- UI: Rules that were not evaluated because the target resources were not found will be marked as skipped and will not impact the pass/fail scores for each assessment. ADD PIC HERE![image](https://user-images.githubusercontent.com/71668153/111820780-219c4880-889f-11eb-97f9-ebdbf2c92b10.png)
+- UI: Rules that were not evaluated because the target resources were not found will be marked as skipped and will not impact the pass/fail scores for each assessment ![image](https://user-images.githubusercontent.com/71668153/118518620-2a699900-b6ed-11eb-83f7-2f7b357b65a9.png)
+
 
 ## [1.1.16] - (Mar 20, 2021)
 ### Added
@@ -14,7 +15,7 @@ Non-Context Aware (1):
 ## [1.1.8] - (Mar 17, 2021)
 ### Added
 Platform Enhancements (1):
-- UI: Cloudrail scan results can be tracked from the assessment page ADD PIC HERE![image](https://user-images.githubusercontent.com/71668153/111820780-219c4880-889f-11eb-97f9-ebdbf2c92b10.png)
+- UI: Cloudrail scan results can be tracked from the assessment page ![image](https://user-images.githubusercontent.com/71668153/118518823-5edd5500-b6ed-11eb-8fdf-203c5562b6f9.png)
  
 Rule Added
 Non-Context Aware (1):
