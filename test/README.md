@@ -95,7 +95,9 @@ NOTES:
   73. [Ensure VPC Endpoint for SQS is enabled in all Availability Zones in use a VPC](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/sqs_vpc_endpoint_interface_availability_zone)
   74. [Ensure all resources that can be tagged have at least one tag](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_all_resources_tagged_rule)
   75. [Ensure VPC Endpoint for EC2 is enabled in all VPCs in use](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/vpc_endpoint_ec2_exposure_rule)
-  76. [Ensure IAM policies pass Access Analyzer policy validation without issues](/test/aws/terraform/access_analyzer_validation_rule)  
-
+  76. [Ensure IAM policies pass Access Analyzer policy validation without issues](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/access_analyzer_validation_rule)
+  77. [Ensure Sagemaker Endpoint Configurations are set to encrypt data at rest](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/ensure_sagemaker_endpoint_config_encrypted_at_rest_rule)
+  78. [Ensure no role uses an overly wide principal for assume role policy](https://github.com/indeni/cloudrail-demo/tree/master/test/aws/terraform/iam_role_assume_role_principal_too_wide)
+  
 
 </details>
