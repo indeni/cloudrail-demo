@@ -11,12 +11,6 @@ Rule Added
 Non-Context Aware (1):
 - [CR-1804] Ensure no role uses an overly wide principal for assume role policy
 
-## [1.1.16] - (Mar 20, 2021)
-### Added
-Rule Added
-Non-Context Aware (1):
-- [CR-1804] Ensure no role uses an overly wide principal for assume role policy
-
 ## [1.1.8] - (Mar 17, 2021)
 ### Added
 Platform Enhancements (1):
