@@ -1,62 +1,71 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## [1.0.110] - (Mar 16, 2021)
+## [1.2.170] - (May 11, 2021)
 ### Added
-Platform Enhancements (1):
-- UI: Support for additional enforcement modes. Cloudrail can ignore rules within policy. It can also enforce only when a new resource will be created from Terraform and is not currently mapped to an existing resource in the cloud![image](https://user-images.githubusercontent.com/71668153/111820780-219c4880-889f-11eb-97f9-ebdbf2c92b10.png)
- 
-## [1.0.99] - (Mar 14, 2021)
+Platform Enhancements (2):
+- UI: Filter assessments ![image](https://user-images.githubusercontent.com/71668153/118539040-c9998b00-b703-11eb-8579-1c014d942059.png)
+- UI: Filter assessment details by the violation type ![image](https://user-images.githubusercontent.com/71668153/118539162-f0f05800-b703-11eb-9622-fa00e393b367.png)
+- UI: Filter rules by type or severity ![image](https://user-images.githubusercontent.com/71668153/118539235-0b2a3600-b704-11eb-8214-55dac91b1ece.png)
+
+
+## [1.2.161] - (May 8, 2021)
 ### Added
 Rule Added
+Context Aware (2):
+- [CR-2065] Report unused security group
+- [CR-2099] Ensure unused roles are removed
+
+Platform Enhancements (1):
+- UI: Violated rules will be styled differently based on enforcement level ![image](https://user-images.githubusercontent.com/71668153/118539329-28f79b00-b704-11eb-9b4a-25d669c5add0.png)
+
+
+## [1.2.122] - (Apr 26, 2021)
+### Added 
+Platform Enhancements (1):
+- UI: Manage users using the new user table: ![image](https://user-images.githubusercontent.com/71668153/118540169-2cd7ed00-b705-11eb-8393-57ca2c75a709.png)
+
+
+## [1.2.113] - (Apr 24, 2021)
+### Added
 Non-Context Aware (1):
-- [CR-1804] Ensure all resources that can be tagged have at least one tag
-Context Aware (1):
-- [CR-966] Ensure VPC Endpoint for EC2 is enabled in all VPCs in use
+- [CR-1799] Ensure SageMaker Notebook instances are not publicly accessible
 
-## [1.0.87] - (Mar 11, 2021)
-### Added
 Platform Enhancements (1):
-- UI: Support for searching for scans based on scan "source" ![image](https://user-images.githubusercontent.com/71668153/111819015-15af8700-889d-11eb-9edb-ee163a606f21.png)
+- UI: Identify assessments by their origin using the origin icon ![image](https://user-images.githubusercontent.com/71668153/118540467-77596980-b705-11eb-9f91-94305af7cd79.png)
 
-## [1.0.77] - (Mar 10, 2021)
+
+## [1.2.102] - (Apr 21, 2021)
+### Added
+Non-Context Aware (1):
+- [CR-2032] Validate IAM policies in IaC using Access Analyzer Policy Validation API
+
+## [1.2.98] - (Apr 20, 2021)
 ### Added
 Rule Added
-Non-Context Aware (3):
-- [CR-1067] Ensure SSM Parameter Store SecureString strings are encrypted at rest with customer-managed CMK
-- [CR-1806] Ensure each Lambda function has a non-infinite log retention
 Context Aware (1):
-- [CR-952] Ensure VPC Endpoint for SQS is enabled in all Availability Zones in use a VPC
+- [CR-1798] Ensure Database Migration Service instances are not publicly accessible
 
-
-## [1.0.56] - (Mar 7, 2021)
+## [1.2.70] - (Apr 12, 2021)
 ### Added
 Rule Added
 Non-Context Aware (2):
-- [CR-806] Ensure ECS task definitions being created are set to encrypt in transit with EFS
-Context Aware (1):
-- [CR-1500] Ensure VPC Endpoint for SQS is enabled in all VPCs in use
+- [CR-1237] Ensure S3 buckets are not indirectly exposed via overly permissive Lambda Function and public API Gateway
+- [CR-1398] Ensure RDS cluster instances being created are set to encrypt the performance insights with customer-managed CMK
 
-## [1.0.35] - (Mar 2, 2021)
+## [1.2.44] - (Apr 5, 2021)
 ### Added
 Rule Added
-Context Aware (1):
-- [CR-1500] Ensure Neptune database is not publicly accessible
+Non-Context Aware (1):
+- [CR-1175] Ensure Sagemaker Notebook Instances are set to encrypt artifacts at rest with customer-managed CMK
 
-## [1.0.16] - (Mar 25, 2021)
+## [1.2.25] - (Apr 1, 2021)
 ### Added
-Rule Added:
-Context Aware (1):
-- [CR-1660] Ensure IAM entities' policies are managed solely in infrastructure-as-code
-
-## [1.0.9] - (Feb 23, 2021)
-### Added
-Platform Enhancements (2):
-- Officially launched GA of the web console! You can access it here: https://web.cloudrail.app/ 
-![image](https://user-images.githubusercontent.com/71668153/111805641-71264880-888e-11eb-8dd2-b493ec4fbdc3.png)
-- Added Remediation Steps for each rule
-![image](https://user-images.githubusercontent.com/71668153/111804779-9ebec200-888d-11eb-806b-ba3a5f44c25f.png)
+Platform Enhancements (1):
+- UI: When onboarding cloudrail to AWS, you can now preview the cloudformation stack that we will use here![image](https://user-images.githubusercontent.com/71668153/118540582-922bde00-b705-11eb-8dfe-97d60a581bc2.png)
 
 For changes made in previous versions:
+- [V1.1](https://github.com/indeni/cloudrail-demo/blob/v1.1/CHANGELOG.md)
+- [V1.0](https://github.com/indeni/cloudrail-demo/blob/v1.0/CHANGELOG.md)
 - [V0.8](https://github.com/indeni/cloudrail-demo/blob/v0.8/CHANGELOG.md)
 - [V0.7](https://github.com/indeni/cloudrail-demo/blob/v0.7/CHANGELOG.md)
 - [V0.6](https://github.com/indeni/cloudrail-demo/blob/v0.6/CHANGELOG.md)
