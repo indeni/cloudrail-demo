@@ -5,7 +5,7 @@ deploy:
   steps:
     terraformPlan:
       after:
-        - pip install cloudrail
+        - pip install cloudrail >/dev/null
         - >
           cloudrail run -p .tf-plan 
           --origin ci 
