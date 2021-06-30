@@ -5,11 +5,7 @@ deploy:
   steps:
     terraformPlan:
       after:
-        - pip install --no-cache --upgrade pip setuptools
-        - pip install virtualenv
-        - virtualenv myenv
-        - source myenv/bin/activate
-        - pip install cloudrail==0.0.1949 --extra-index-url https://indeni.jfrog.io/indeni/api/pypi/cloudrail-cli-pypi-develop/simple
+        - pip install cloudrail
         - >
           cloudrail run -p .tf-plan 
           --origin ci 
