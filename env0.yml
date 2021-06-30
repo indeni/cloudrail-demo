@@ -1,3 +1,4 @@
+# This is an example for how to run Cloudrail within env0
 version: 1
 
 deploy:
@@ -5,5 +6,10 @@ deploy:
     terraformPlan:
       after:
         # env0 saves the TF plan out as .tf-plan
-        - cloudrail run --tf-plan .tf-plan --origin ci --build-link "https://app.env0.com/p/${ENV0_PROJECT_ID}/environments/${ENV0_ENVIRONMENT_ID}"  --execution-source-identifier "${ENV0_ENVIRONMENT_NAME} - ${ENV0_TEMPLATE_NAME} - ${ENV0_ENVIRONMENT_ID}" --auto-approve
-
+        - pip install cloudrail
+        - >
+          cloudrail run -p .tf-plan 
+          --origin ci 
+          --build-link "https://app.env0.com/p/${ENV0_PROJECT_ID}/environments/${ENV0_ENVIRONMENT_ID}"  
+          --execution-source-identifier "${ENV0_ENVIRONMENT_ID}" 
+          --auto-approve
